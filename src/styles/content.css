@@ -1,0 +1,8 @@
+.content{
+    display: flex;
+    gap: 20px;
+    margin: 0 10px;
+}
+img{
+    border-radius: 5px;
+}
