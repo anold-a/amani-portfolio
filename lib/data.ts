@@ -2,6 +2,8 @@ export const profile = {
   name: "Arnold Amani",
   first: "Arnold",
   last: "Amani",
+  role: "Dev",
+  location: "Nyeri, Kenya",
   tagline: "Into Advanced System Design.",
   bio: [
     "First Of My Name.",
@@ -40,4 +42,12 @@ export const projects = [
 export const blogs = [
   { date: "(coming soon).", read: "5 min", title: "(coming soon).", desc: "(coming soon).", tags: ["Next.js", "Web"] },
   { date: "(coming soon).", read: "8 min", title: "(coming soon).", desc: "(coming soon).", tags: ["Learning"] },
+];
+
+export const skills = ["Next.js", "React", "TypeScript", "Tailwind CSS", "Prisma", "Node.js", "PostgreSQL", "Git"];
+
+export const stats = [
+  { value: "BBIT", label: "Graduate" },
+  { value: "Dip.", label: "Education" },
+  { value: "Next.js", label: "Main stack" },
 ];
