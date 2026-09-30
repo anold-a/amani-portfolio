@@ -23,8 +23,8 @@ export const certs = [
 ];
 
 export const experience = [
-  { period: "2026 - Present", role: "Independent Developer", points: ["Built and shipped full-stack projects with Next.js, Prisma and Tailwind.", "Maintain a public portfolio of projects on GitHub."] },
-  { period: "2024", role: "Team Member - Mcorcis", points: ["Actively participated in build end-to-end full stack projects", "(coming soon)."] },
+  {id:"001", period: "2026 - Present", role: "Independent Developer", points: ["Built and shipped full-stack projects with Next.js, Prisma and Tailwind.", "Maintain a public portfolio of projects on GitHub."] },
+  {id:"002", period: "2024", role: "Team Member - Mcorcis", points: ["Actively participated in build end-to-end full stack projects", "(coming soon)."] },
 ];
 
 export const refs = [

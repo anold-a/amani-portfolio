@@ -3,6 +3,7 @@ import Navbar from "@/components/layout/Navbar";
 import Hero from "@/components/homepage/Herosection";
 import Bio from "@/components/homepage/BioSection";
 import Certs from "@/components/homepage/Certs";
+import Experience from "@/components/homepage/Experience";
 
 
 export default function Home() {
@@ -12,6 +13,7 @@ export default function Home() {
     <Hero />
     <Bio />
     <Certs />
+    <Experience />
     </>
     
   );
