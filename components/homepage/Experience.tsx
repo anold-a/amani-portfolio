@@ -1,5 +1,5 @@
 import SharedUI from "../layout/SharedUI";
-import Reveal from "../layout/Reveal"; // NEW
+import Reveal from "../layout/Reveal"; 
 import { experience } from "@/lib/data";
 
 export default function Experience() {
