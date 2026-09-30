@@ -4,7 +4,7 @@ import { profile,stats } from "@/lib/data";
 
 export default function Bio() {
   return (
-    <SharedUI id="bio" title="Software DEV.">
+    <SharedUI index="01" id="bio" title="Software DEV.">
       <div className="grid gap-10 md:grid-cols-[1.2fr_1fr]">
         <div className="space-y-6 text-xl leading-relaxed text-ink/80">
           {profile.bio.map((p) => (
