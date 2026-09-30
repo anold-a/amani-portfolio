@@ -1,35 +1,43 @@
 @import "tailwindcss";
 
 :root {
-  --bg: #fff8f0;
-  --card: #faf5ef;
-  --ink: #0a0410;
-  --muted: #6b6470;
-  --line: #eadfd6;
-  --brand: #4a1d5c;
+  --bg:#0b0b0f;
+  --card:#13131a;
+  --ink: #f2f0ea;
+  --muted:#8b8b98;
+  --line: #23232e;
+  --brand:#c6ff3d;
 }
 
 @theme inline {
+  --color-bg: var(--bg); 
   --color-card: var(--card);
   --color-ink: var(--ink);
   --color-muted: var(--muted);
   --color-line: var(--line);
   --color-brand: var(--brand);
-  --font-display: var(--font-outfit);
-  --font-sans: var(--font-ubuntu);
+  --font-display: var(--font-grotesk);
+  --font-sans: var(--font-inter);
+  --font-mono: var(--font-jetbrains); 
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
 
 html { scroll-behavior: smooth; }
-body { background: var(--bg); color: var(--ink); }
-section[id] { scroll-margin-top: 5rem; }
+body { background: var(--bg);
+   color: var(--ink);
+   background-image: radial-gradient(rgba(255, 255, 255, 0.06) 1px, transparent 1px);
+   background-size: 24px 24px;
+  }
+section[id] { scroll-margin-top: 2rem; }
+::selection { background: var(--brand); color: var(--bg); } 
+
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+.marquee-track { animation: marquee 35s linear infinite; }
 
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
+  .marquee-track { animation: none; } 
 }

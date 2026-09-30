@@ -1,13 +1,10 @@
 import type { Metadata } from "next";
-import {  Outfit, Ubuntu } from "next/font/google";
+import {Space_Grotesk, Inter, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 
-const outfit = Outfit({ subsets: ["latin"], variable: "--font-outfit" });
-const ubuntu = Ubuntu({
-  subsets: ["latin"],
-  weight: ["300", "400", "500", "700"],
-  variable: "--font-ubuntu",
-});
+const grotesk = Space_Grotesk({ subsets: ["latin"], variable: "--font-grotesk" });   
+const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });               
+const jetbrains = JetBrains_Mono({ subsets: ["latin"], variable: "--font-jetbrains" });
 
 export const metadata: Metadata = {
   title: "Arnold Amani | Software Developer",
@@ -23,7 +20,7 @@ export default function RootLayout({ children }:{children: React.ReactNode}) {
   return (
     <html
       lang="en"
-      className={`${outfit.variable} ${ubuntu.variable}`}
+      className={`${grotesk.variable} ${inter.variable} ${jetbrains.variable}`}
     >
       <body className="font-sans antialiased">{children}</body>
     </html>
