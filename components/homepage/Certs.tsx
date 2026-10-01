@@ -3,18 +3,21 @@ import SharedUI from "@/components/layout/SharedUI";
 import Tag from "@/components/layout/Tag";
 import Reveal from "@/components/layout/Reveal"; 
 import { certs } from "@/lib/data";
+import Image from "next/image";
 
 export default function Certs() {
   return (
-    <SharedUI id="certs" index="02" title="Proof of work, on paper."> 
+    <SharedUI id="certs" index="02" note="the paperwork" title={<>Learning, <span className="italic">certified</span></>}> 
       <div className="grid gap-5 md:grid-cols-2">
         {certs.map((c, i) => (
           <Reveal key={c.title} delay={i * 100}> 
-            <article className="group relative h-full overflow-hidden rounded-2xl border border-line bg-card p-7 transition hover:-translate-y-1 hover:border-brand/60">
-              
-              <span className="absolute right-5 top-2 font-display text-7xl font-bold text-line transition group-hover:text-brand/25">
-                {String(i + 1).padStart(2, "0")}
-              </span>
+            
+               <article className=" relative h-full overflow-hidden rounded-lg border border-line  p-6">
+              {c.image && (
+<div className="relative mb-5 aspect-4/3 overflow-hidden rounded border border-line bg-white">
+<Image src={c.image} alt={`${c.title} certificate`} fill sizes="(min-width: 768px) 50vw, 100vw" className="object-contain" />
+</div>
+)}
               <Award className="text-brand" />
               <h3 className="mt-6 font-display text-2xl font-semibold">{c.title}</h3>
               <p className="mt-2 text-muted">{c.desc}</p>
