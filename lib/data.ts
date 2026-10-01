@@ -40,7 +40,7 @@ export const projects = [
 ];
 
 export const blogs = [
-  { date: "(coming soon).", read: "5 min", title: "(coming soon).", desc: "(coming soon).", tags: ["Next.js", "Web"] },
+  { date: "(coming soon ).", read: "5 min", title: "(coming ).", desc: "(coming soon).", tags: ["Next.js", "Web"] },
   { date: "(coming soon).", read: "8 min", title: "(coming soon).", desc: "(coming soon).", tags: ["Learning"] },
 ];
 
