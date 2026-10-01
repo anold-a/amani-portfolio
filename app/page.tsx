@@ -7,6 +7,7 @@ import Experience from "@/components/homepage/Experience";
 import Refs from "@/components/homepage/Refs";
 import Projects from "@/components/homepage/Projects";
 import Contact from "@/components/homepage/Contact";
+import Footer from "@/components/homepage/Footer";
 
 
 export default function Home() {
@@ -20,6 +21,7 @@ export default function Home() {
     <Refs />
     <Projects />
     <Contact />
+    <Footer />
     </>
     
   );
