@@ -1,12 +1,15 @@
 @import "tailwindcss";
 
 :root {
-  --bg:#0b0b0f;
-  --card:#13131a;
-  --ink: #f2f0ea;
-  --muted:#8b8b98;
-  --line: #23232e;
-  --brand:#c6ff3d;
+ 
+--brand:#c6ff3d;
+--bg: #f7f2ea;
+--card: #fffdf9;
+--ink: #1f1b16;
+--muted: #6b6258;
+--line: #e6dccd;
+--brand: #0f5c55;
+--accent: #c8602a;
 }
 
 @theme inline {
@@ -19,6 +22,8 @@
   --font-display: var(--font-grotesk);
   --font-sans: var(--font-inter);
   --font-mono: var(--font-jetbrains); 
+  --color-accent: var(--accent);
+  --font-hand: var(--font-caveat);
 }
 
 
@@ -41,3 +46,32 @@ section[id] { scroll-margin-top: 2rem; }
   html { scroll-behavior: auto; }
   .marquee-track { animation: none; } 
 }
+
+[data-theme="midnight"] {
+  --bg: #0f1724; --card: #162033; --ink: #e9eef7; --muted: #94a3b8;
+  --line: #25324a; --brand: #6ea8ff; --accent: #ffb454;
+}
+[data-theme="savanna"] {
+  --bg: #f2f4ee; --card: #fbfcf8; --ink: #1b241d; --muted: #5c6b60;
+  --line: #dce3d5; --brand: #2f6b3a; --accent: #d9972b;
+}
+
+.marker {
+  background-image: linear-gradient(transparent 62%, color-mix(in srgb, var(--accent) 35%, transparent) 62%);
+  padding: 0 0.15em;
+}
+@media (prefers-reduced-motion: reduce) {
+  .card-pop, .card-pop:hover { transition: none; transform: none; }
+}
+
+.card-pop {
+  box-shadow: 5px 5px 0 0 var(--line);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+.card-pop:hover {
+  transform: translate(-2px, -2px) rotate(-0.4deg);
+  box-shadow: 8px 8px 0 0 color-mix(in srgb, var(--accent) 45%, transparent);
+  border-color: var(--ink);
+}
+
+ 
