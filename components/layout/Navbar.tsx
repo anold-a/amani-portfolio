@@ -44,50 +44,29 @@ export default function Navbar() {
 
   return (
     <>
-    
-      <div className="fixed left-0 top-0 z-70 h-0.5 bg-brand" style={{ width: `${progress * 100}%` }} />
-
-      
-      <Link
-        href={profile.resume}
-        target="_blank"
-        rel="noreferrer"
-        className="fixed right-4 top-4 z-50 flex items-center gap-2 rounded-full border border-line bg-card/80 px-4 py-2 font-mono text-xs backdrop-blur transition hover:border-brand hover:text-brand"
-      >
-        Résumé <ExternalLink size={12} />
-      </Link>
-
-     
-      <nav className="fixed left-4 top-1/2 z-50 hidden -translate-y-1/2 flex-col md:flex">
-        {links.map(({ id, label }, i) => (
-          <a key={id} href={`#${id}`} className="group flex items-center gap-3 py-1.5 font-mono text-xs">
-            <span className={active === id ? "text-brand" : "text-muted transition group-hover:text-ink"}>
-              {String(i).padStart(2, "0")}
-            </span>
-            <span
-              className={`whitespace-nowrap rounded bg-card px-2 py-1 transition ${
-                active === id ? "text-brand opacity-100" : "text-ink opacity-0 group-hover:opacity-100"
-              }`}
-            >
-              {label}
-            </span>
-          </a>
-        ))}
-      </nav>
-
-      <nav className="fixed inset-x-3 bottom-3 z-50 flex justify-between rounded-2xl border border-line bg-card/90 p-1.5 backdrop-blur md:hidden">
+      <div className="fixed left-0 top-0 z-70 h-1 bg-accent" style={{ width: `${progress * 100}%` }} />
+      <nav className="fixed left-1/2 top-4 z-50 flex max-w-[94vw] -translate-x-1/2 items-center gap-1 overflow-x-auto rounded-xl border border-line bg-card/85 p-1.5 ">
         {links.map(({ id, label, Icon }) => (
           <a
             key={id}
             href={`#${id}`}
             aria-label={label}
-            className={`grid size-10 place-items-center rounded-xl transition ${
-              active === id ? "bg-brand text-bg" : "text-muted"
+            className={`flex shrink-0 items-center gap-2 rounded-full px-3 py-2 text-sm font-semibold transition ${
+              active === id ? "bg-brand text-bg" : "text-ink/70 hover:bg-line/60 hover:text-ink"
             }`}
           >
             <Icon size={16} />
+            <span className="hidden lg:inline">{label}</span>
           </a>
         ))}
+        <a
+          href={profile.resume}
+          target="_blank"
+          rel="noreferrer"
+          className="ml-1 flex shrink-0 items-center gap-2 rounded-full border-2 border-ink px-3 py-2 text-sm font-bold"
+        >
+          <span className="hidden sm:inline">Résumé</span> <ExternalLink size={14} />
+        </a>
       </nav>
     </>
   );
