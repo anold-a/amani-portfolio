@@ -3,7 +3,7 @@ import { refs } from "@/lib/data";
 
 export default function Refs() {
   return (
-    <SharedUI id="refs" index="04" title="What people say">
+    <SharedUI id="refs" index="04" note="kind words" title={<>What people <span className="italic">say</span></>}>
       <div className="grid gap-6 md:grid-cols-2">
         {refs.map((r, i) => (
           <figure key={i} className="rounded-xl border border-line bg-card p-8">
