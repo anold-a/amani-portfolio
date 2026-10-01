@@ -6,6 +6,7 @@ import Certs from "@/components/homepage/Certs";
 import Experience from "@/components/homepage/Experience";
 import Refs from "@/components/homepage/Refs";
 import Projects from "@/components/homepage/Projects";
+import Contact from "@/components/homepage/Contact";
 
 
 export default function Home() {
@@ -18,6 +19,7 @@ export default function Home() {
     <Experience />
     <Refs />
     <Projects />
+    <Contact />
     </>
     
   );
