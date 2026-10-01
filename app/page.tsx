@@ -8,6 +8,7 @@ import Refs from "@/components/homepage/Refs";
 import Projects from "@/components/homepage/Projects";
 import Contact from "@/components/homepage/Contact";
 import Footer from "@/components/homepage/Footer";
+import Cursor from "@/components/homepage/Cursor";
 
 
 export default function Home() {
@@ -22,6 +23,7 @@ export default function Home() {
     <Projects />
     <Contact />
     <Footer />
+    <Cursor />
     </>
     
   );
