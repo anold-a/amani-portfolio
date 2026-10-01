@@ -4,6 +4,7 @@ import Hero from "@/components/homepage/Herosection";
 import Bio from "@/components/homepage/BioSection";
 import Certs from "@/components/homepage/Certs";
 import Experience from "@/components/homepage/Experience";
+import Refs from "@/components/homepage/Refs";
 
 
 export default function Home() {
@@ -14,6 +15,7 @@ export default function Home() {
     <Bio />
     <Certs />
     <Experience />
+    <Refs />
     </>
     
   );
