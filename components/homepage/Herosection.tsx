@@ -25,9 +25,9 @@ export default function Hero() {
           <h1 className="mt-8 font-display text-[clamp(3.5rem,11vw,9rem)] font-bold leading-[0.9] tracking-tighter">
             {profile.first}
             <br />
-            <span className="text-transparent" style={{ WebkitTextStroke: "2px var(--brand)" }}>
-              {profile.last}
-            </span>
+            <span className="relative inline-block text-brand">
+               {profile.last}
+             </span>
           </h1>
 
           
@@ -35,7 +35,8 @@ export default function Hero() {
             <span className="text-brand">&gt;</span> {profile.role}
             <span className="ml-1 inline-block h-5 w-2 translate-y-1 animate-pulse bg-brand" />
           </p>
-          <p className="mt-4 max-w-md text-muted">{profile.tagline}</p>
+          
+          <p className="mt-6 max-w-md border-l-4 border-accent pl-4 text-lg italic text-muted">“{profile.tagline}”</p>
 
           
           <div className="mt-10 flex flex-wrap gap-4">
@@ -55,6 +56,7 @@ export default function Hero() {
 
         
         <div className="relative mx-auto w-full max-w-sm">
+          
           <div className="absolute inset-0 rotate-3 rounded-3xl border border-brand/60" />
           <div className="relative aspect-4/5 overflow-hidden rounded-3xl bg-card">
             <Image
@@ -65,6 +67,11 @@ export default function Hero() {
               sizes="(min-width: 768px) 384px, 90vw"
               className="object-cover grayscale"
             />
+            {floaters.map(({ Icon, pos }, i) => (
+            <div key={i} className={`absolute ${pos} grid size-12 place-items-center rounded-xl border border-line bg-card text-brand `}>
+              <Icon size={20} />
+            </div>
+          ))}
           </div>
           <span className="absolute -bottom-4 -left-4 -rotate-6 rounded-full bg-brand px-4 py-2 font-mono text-xs font-bold text-bg">
             BBIT · TEACHER · DEV
