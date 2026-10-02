@@ -35,9 +35,19 @@ export const experience = [
   {id:"002", period: "2024", role: "Team Member - Mcorcis", points: ["Actively participated in build end-to-end full stack projects", "(coming soon)."] },
 ];
 
-export const refs = [
-  { quote: "(coming soon).", name: "(coming soon).", role: "(coming soon)." },
-  { quote: "(coming soon).", name: "(coming soon).", role: "(coming soon)." },
+export const builds = [
+   {
+    quote:
+      "I use projects as a way to turn ideas into practical software and explore technologies I want to understand better.",
+    name: "Build",
+    role: "Turning ideas into working projects.",
+  },
+  {
+    quote:
+      "My projects evolve as I learn — from experimenting with new stacks to improving existing applications and exploring new ideas.",
+    name: "Explore",
+    role: "Current work and future projects.",
+  },
 ];
 
 type Project = {
@@ -55,10 +65,7 @@ export const projects: Project[] = [
   { name: "Ikonex School Management", desc: "School management application.", stack: ["Next.js"], href: "https://github.com/iam-amani/ikonex-school-management-application-" },
 ];
 
-export const blogs = [
-  { date: "(coming).", read: "5 min", title: "(coming ).", desc: "(coming soon).", tags: ["Next.js", "Web"] },
-  { date: "(coming soon).", read: "8 min", title: "(coming soon).", desc: "(coming soon).", tags: ["Learning"] },
-];
+
 
 export const skills = ["Next.js", "React", "TypeScript", "Tailwind CSS", "Prisma", "Node.js", "PostgreSQL", "Git"];
 

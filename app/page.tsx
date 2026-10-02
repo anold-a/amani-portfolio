@@ -4,7 +4,7 @@ import Hero from "@/components/homepage/Herosection";
 import Bio from "@/components/homepage/BioSection";
 import Certs from "@/components/homepage/Certs";
 import Experience from "@/components/homepage/Experience";
-import Refs from "@/components/homepage/Refs";
+import Builds from "@/components/homepage/Builds";
 import Projects from "@/components/homepage/Projects";
 import Contact from "@/components/homepage/Contact";
 import Footer from "@/components/homepage/Footer";
@@ -21,7 +21,7 @@ export default function Home() {
     <Bio />
     <Certs />
     <Experience />
-    <Refs />
+    <Builds />
     <Projects />
     <Blogs />
     <Contact />
