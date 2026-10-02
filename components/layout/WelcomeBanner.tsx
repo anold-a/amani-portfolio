@@ -2,6 +2,7 @@
 "use client"
 
 import { useState,useEffect } from "react";
+import confetti from 'canvas-confetti';
 
 export default function WelcomeBanner(){
 
@@ -13,7 +14,15 @@ export default function WelcomeBanner(){
 
     const textTimer = setTimeout(() => {
       setIsLoading(false);
-         setText("Thank you for visiting my portifolio")
+         setText("Thank you for visiting my portifolio");
+         confetti({
+      particleCount: 150,     
+      spread: 80,             
+      origin: { x: 0.5, y: 0.5 },
+      startVelocity: 45,      
+      gravity: 1.2,           
+      scalar: 1.2             
+    });
     }, 3000);
 
     const hideTimer = setTimeout(() => {
@@ -29,7 +38,7 @@ export default function WelcomeBanner(){
   if(!isVisible) return null;
 
   return(
-    <div className="fixed inset-0 flex flex-col items-center justify-center bg-zinc-900 text-white z-50 gap-4">
+    <div className="fixed max-w-2xl mx-auto top-20 bottom-30 rounded-lg inset-0 flex flex-col items-center justify-center  text-white z-50 gap-4 bg-white/40 backdrop-blur-md shadow-2xl border border-white/20">
 
       {isLoading ? (
         <div className="flex flex-col items-center gap-3">
@@ -53,13 +62,13 @@ export default function WelcomeBanner(){
               d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
             ></path>
           </svg>
-          <span className="text-zinc-400 text-sm tracking-wide animate-pulse">
+          <span className="text-brand text-sm tracking-wide animate-pulse">
             {text}
           </span>
         </div>
       ) : (
         
-        <h1 className="text-[clamp(1.5rem,5vw,3rem)] font-bold tracking-tight animate-fade-in text-brand">
+        <h1 className="text-[clamp(1.5rem,5vw,3rem)] flex text-center justify-center font-bold tracking-tight animate-fade-in text-brand">
           {text}
         </h1>
       )}
