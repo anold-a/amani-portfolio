@@ -3,6 +3,7 @@ import { Code, Server, Smartphone, Network } from "lucide-react";
 import { profile,skills } from "@/lib/data";
 import Marquee from "@/components/homepage/Marquee"; 
 import { ArrowDownRight, FileText } from "lucide-react";
+import Link from "next/link";
 
 const floaters = [
   { Icon: Code, pos: "-left-5 top-[60%]" },
@@ -40,24 +41,24 @@ export default function Hero() {
 
           
           <div className="mt-10 flex flex-wrap gap-4">
-            <a href="#projects" className="flex items-center gap-2 rounded-full bg-brand px-6 py-3 font-semibold text-bg">
+            <Link href="#projects" className="flex items-center gap-2 rounded-full bg-brand px-6 py-3 font-semibold text-bg">
               See my work <ArrowDownRight size={18} />
-            </a>
-            <a
+            </Link>
+            <Link
               href={profile.resume}
               target="_blank"
               rel="noreferrer"
               className="flex items-center gap-2 rounded-full border border-line px-6 py-3 font-semibold transition hover:border-brand hover:text-brand"
             >
-              <FileText size={18} /> Résumé
-            </a>
+              <FileText size={18} /> Curriculum Vitae
+            </Link>
           </div>
         </div>
 
         
         <div className="relative mx-auto w-full max-w-sm">
           
-          <div className="absolute inset-0 rotate-3 rounded-3xl border border-brand/60" />
+          <div className="absolute  rounded-3xl border border-brand/60" />
           <div className="relative aspect-4/5 overflow-hidden rounded-3xl bg-card">
             <Image
               src={profile.photo}
@@ -74,7 +75,7 @@ export default function Hero() {
           ))}
           </div>
           <span className="absolute -bottom-4 -left-4 -rotate-6 rounded-full bg-brand px-4 py-2 font-mono text-xs font-bold text-bg">
-            BBIT · TEACHER · DEV
+            SOFTWARE DEV. iam_amani
           </span>
         </div>
       </div>
