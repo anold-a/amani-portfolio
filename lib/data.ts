@@ -7,7 +7,7 @@ export const profile = {
   tagline: "Into Advanced System Design.",
   bio: [
     "First Of My Name.",
-    "But most people find it accommodating to call me,Sere",
+    "The rest I am still writing.",
     "Beyond coding, I enjoy experimenting on new technologies and deep diving in poetry world.",
   ],
   email: "amaniarnold08@gmail.com",

@@ -57,16 +57,11 @@ export default async function PostPage({ params }: Props) {
           </header>
 
           <div className="mt-10 max-w-3xl -rotate-1 rounded-sm  backdrop-blur-md shadow-2xl border border-white/20 p-6">
-            <span className="font-bold text-3xl leading-none ">text</span>
+            <span className="font-bold text-3xl leading-none ">context</span>
             <p className="mt-1 text-sm">{post.intro}</p>
           </div>
 
-          <PostCover
-            title={post.title}
-            src={post.cover}
-            tag={post.tags[0]}
-            className="mt-10 aspect-21/9 rounded-lg border border-line"
-          />
+          
 
           <div className="mt-12 grid gap-10 lg:grid-cols-[minmax(0,1fr)_14rem]">
             <aside className="lg:col-start-2 lg:row-start-1">
