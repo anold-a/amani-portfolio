@@ -3,7 +3,8 @@ import SharedUI from "@/components/layout/SharedUI";
 import Tag from "@/components/layout/Tag";
 import { projects } from "@/lib/data";
 import Reveal from "../layout/Reveal";
-import { ArrowUpRight } from "lucide-react";
+import Link from "next/link";
+import { ArrowRight, ArrowUpRight } from "lucide-react";
 
 export default function Projects() {
   return (
@@ -40,6 +41,11 @@ export default function Projects() {
             </article>
           </Reveal>
         ))}
+      </div>
+      <div className="mt-8 flex justify-end">
+        <Link href="/coming-soon" className="flex items-center gap-2 font-semibold text-brand hover:underline">
+          On the workbench: what is coming next <ArrowRight size={16} />
+        </Link>
       </div>
     </SharedUI>
   );
