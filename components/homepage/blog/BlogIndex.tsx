@@ -19,7 +19,7 @@ export default function BlogIndex({ items }: { items: PostMeta[] }) {
   return (
     <>
       <div className="mt-8 flex flex-wrap items-center gap-2" role="group" aria-label="Filter by tag">
-        <span className="mr-1 font-hand text-xl text-accent">filter:</span>
+        <span className="mr-1 font-normal text-xl ">filter:</span>
         {tags.map((t) => (
           <button
             key={t}
@@ -40,11 +40,11 @@ export default function BlogIndex({ items }: { items: PostMeta[] }) {
       {featured && (
         <Link
           href={`/blogs/${featured.slug}`}
-          className="card-pop group mt-10 grid overflow-hidden rounded-lg border border-line bg-card md:grid-cols-[1.1fr_1fr]"
+          className=" group mt-10 grid overflow-hidden rounded-lg border border-line bg-card md:grid-cols-[1.1fr_1fr]"
         >
           <PostCover title={featured.title} src={featured.cover} tag={featured.tags[0]} className="min-h-56" />
           <div className="flex flex-col justify-center p-7">
-            <span className="font-hand text-2xl text-accent">note no. {noOf(featured.slug)}</span>
+            <span className="font-normal text-2xl">note no. {noOf(featured.slug)}</span>
             <h2 className="mt-1  text-2xl font-bold leading-tight sm:text-3xl">{featured.title}</h2>
             <p className="mt-3 text-muted">{featured.summary}</p>
             <p className="mt-5 flex items-center gap-4 text-sm text-muted">
@@ -66,7 +66,7 @@ export default function BlogIndex({ items }: { items: PostMeta[] }) {
                 href={`/blogs/${p.slug}`}
                 className="group grid items-center gap-3 py-6 transition hover:bg-card md:grid-cols-[3.5rem_1fr_auto] md:px-3"
               >
-                <span className="font-hand text-3xl leading-none text-accent">{noOf(p.slug)}</span>
+                <span className="font-normal text-3xl leading-none ">{noOf(p.slug)}</span>
                 <div>
                   <h3 className="font-display text-xl font-semibold transition group-hover:text-brand">{p.title}</h3>
                   <p className="mt-1 text-muted">{p.summary}</p>

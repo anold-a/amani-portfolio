@@ -118,3 +118,4 @@ export const stats = [
   { value: "Next.js", label: "Main stack" },
 ];
 
+

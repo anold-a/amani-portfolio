@@ -58,7 +58,7 @@ export default async function PostPage({ params }: Props) {
 
           <div className="mt-10 max-w-3xl -rotate-1 rounded-sm  backdrop-blur-md shadow-2xl border border-white/20 p-6">
             <span className="font-bold text-3xl leading-none ">text</span>
-            <p className="mt-1 text-lg">{post.intro}</p>
+            <p className="mt-1 text-sm">{post.intro}</p>
           </div>
 
           <PostCover
@@ -77,7 +77,7 @@ export default async function PostPage({ params }: Props) {
               <PostBody blocks={post.content} />
 
               <div className="mt-14 flex flex-wrap items-center justify-between gap-4 border-t border-line pt-6">
-                <p className="font-hand text-2xl ">enjoyed this? pass it on</p>
+                <p className=" text-sm ">enjoyed this? pass it on</p>
                 <CopyLink />
               </div>
 
