@@ -12,6 +12,20 @@
 --accent: #c8602a;
 }
 
+@theme {
+  --animate-typewriter:
+    typing 2.5s steps(var(--chars, 30), end) forwards,
+    caret 0.8s step-end infinite;
+
+  @keyframes typing {
+    from { width: 0; }
+    to { width: calc(var(--chars, 30) * 1ch); }
+  }
+  @keyframes caret {
+    50% { border-color: transparent; }
+  }
+}
+
 @theme inline {
   --color-bg: var(--bg); 
   --color-card: var(--card);

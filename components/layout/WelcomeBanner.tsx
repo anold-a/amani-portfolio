@@ -3,6 +3,7 @@
 
 import { useState,useEffect } from "react";
 import confetti from 'canvas-confetti';
+import Typewriter from "./Typewriter";
 const SEEN_KEY = "welcome-banner-seen";
 
 
@@ -42,7 +43,7 @@ export default function WelcomeBanner(){
       } catch {
         
       }
-    }, 6000);
+    }, 7500);
 
    return () =>{
       clearTimeout(textTimer)
@@ -84,7 +85,7 @@ export default function WelcomeBanner(){
       ) : (
         
         <h1 className="text-[clamp(1.5rem,5vw,3rem)] flex text-center justify-center font-bold tracking-tight animate-fade-in text-brand">
-          {text}
+          <Typewriter text={text} speed={60} />
         </h1>
       )}
     </div>
