@@ -17,7 +17,7 @@ export default function CodeBlock({ code, file, lang }: { code: string; file?: s
   }
 
   return (
-    <div className="overflow-hidden rounded-lg border border-ink/80 bg-ink text-bg shadow-[5px_5px_0_0_var(--line)]">
+    <div className="overflow-hidden rounded-lg border border-ink/80 bg-ink text-bg ">
       <div className="flex items-center justify-between border-b border-bg/15 px-4 py-2 font-mono text-xs text-bg/70">
         <span>{file ?? lang}</span>
         <button

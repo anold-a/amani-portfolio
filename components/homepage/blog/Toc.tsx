@@ -43,11 +43,11 @@ export default function Toc({ headings }: { headings: Heading[] }) {
   return (
     <>
       <details className="rounded-lg border border-line bg-card p-4 lg:hidden">
-        <summary className="cursor-pointer font-hand text-2xl text-accent">in this post</summary>
+        <summary className="cursor-pointer  text-2xl ">in this post</summary>
         <div className="mt-3">{list}</div>
       </details>
       <nav aria-label="In this post" className="sticky top-24 hidden lg:block">
-        <p className="mb-3 font-hand text-2xl text-accent">in this post</p>
+        <p className="mb-3 font-hand text-2xl ">in this post</p>
         {list}
       </nav>
     </>

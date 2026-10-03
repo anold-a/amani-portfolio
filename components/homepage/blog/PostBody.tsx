@@ -45,7 +45,7 @@ export default function PostBody({ blocks }: { blocks: Block[] }) {
             return (
               <aside
                 key={i}
-                className="-rotate-1 rounded-sm border border-accent/40 bg-accent/10 px-5 py-4 font-hand text-2xl leading-snug text-ink shadow-[4px_4px_0_0_var(--line)]"
+                className="-rotate-1 rounded-sm bg-white/40 backdrop-blur-md shadow-2xl border border-white/20 px-5 py-4 font-hand text-2xl leading-snug text-ink "
               >
                 {b.text}
               </aside>

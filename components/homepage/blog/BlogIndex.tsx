@@ -45,7 +45,7 @@ export default function BlogIndex({ items }: { items: PostMeta[] }) {
           <PostCover title={featured.title} src={featured.cover} tag={featured.tags[0]} className="min-h-56" />
           <div className="flex flex-col justify-center p-7">
             <span className="font-hand text-2xl text-accent">note no. {noOf(featured.slug)}</span>
-            <h2 className="mt-1 font-display text-2xl font-bold leading-tight sm:text-3xl">{featured.title}</h2>
+            <h2 className="mt-1  text-2xl font-bold leading-tight sm:text-3xl">{featured.title}</h2>
             <p className="mt-3 text-muted">{featured.summary}</p>
             <p className="mt-5 flex items-center gap-4 text-sm text-muted">
               <span>{featured.dateLabel}</span>

@@ -56,9 +56,9 @@ export default async function PostPage({ params }: Props) {
             </div>
           </header>
 
-          <div className="mt-10 max-w-3xl -rotate-1 rounded-sm border border-accent/50 bg-accent/10 p-6 shadow-[5px_5px_0_0_var(--line)]">
-            <span className="font-hand text-3xl leading-none text-accent">tl;dr</span>
-            <p className="mt-1 text-lg">{post.tldr}</p>
+          <div className="mt-10 max-w-3xl -rotate-1 rounded-sm  backdrop-blur-md shadow-2xl border border-white/20 p-6">
+            <span className="font-bold text-3xl leading-none ">text</span>
+            <p className="mt-1 text-lg">{post.intro}</p>
           </div>
 
           <PostCover
@@ -77,13 +77,13 @@ export default async function PostPage({ params }: Props) {
               <PostBody blocks={post.content} />
 
               <div className="mt-14 flex flex-wrap items-center justify-between gap-4 border-t border-line pt-6">
-                <p className="font-hand text-2xl text-accent">enjoyed this? pass it on</p>
+                <p className="font-hand text-2xl ">enjoyed this? pass it on</p>
                 <CopyLink />
               </div>
 
               <nav aria-label="More notes" className="mt-10 grid gap-4 sm:grid-cols-2">
                 {newer ? (
-                  <Link href={`/blogs/${newer.slug}`} className="card-pop rounded-lg border border-line bg-card p-5">
+                  <Link href={`/blogs/${newer.slug}`} className=" rounded-lg border border-line bg-card p-5">
                     <span className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-muted">
                       <ArrowLeft size={14} /> Newer
                     </span>
@@ -93,7 +93,7 @@ export default async function PostPage({ params }: Props) {
                   <span />
                 )}
                 {older ? (
-                  <Link href={`/blogs/${older.slug}`} className="card-pop rounded-lg border border-line bg-card p-5 sm:text-right">
+                  <Link href={`/blogs/${older.slug}`} className=" rounded-lg border border-line bg-card p-5 sm:text-right">
                     <span className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-muted sm:justify-end">
                       Older <ArrowRight size={14} />
                     </span>
