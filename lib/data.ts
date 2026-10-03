@@ -13,7 +13,7 @@ export const profile = {
   email: "amaniarnold08@gmail.com",
   github: "https://github.com/iam-amani",
   whatsapp: "https://wa.me/@itzchaupole",
-  resume: "/coming soon",
+  resume: "/",
   photo: "/me.jpg",
 };
 
@@ -31,8 +31,51 @@ export const certs: Cert[] = [
 ];
 
 export const experience = [
-  {id:"001", period: "2026 - Present", role: "Independent Developer", points: ["Built and shipped full-stack projects with Next.js, Prisma and Tailwind.", "Maintain a public portfolio of projects on GitHub."] },
-  {id:"002", period: "2024", role: "Team Member - Mcorcis", points: ["Actively participated in build end-to-end full stack projects", "(coming soon)."] },
+  {
+    id: "001",
+    period: "2026 - Present",
+    role: "Independent Developer",
+    points: [
+      "Plan, build and deploy full-stack web apps on my own, from the first commit to a live site.",
+      "Work mainly with Next.js, Prisma and Tailwind CSS.",
+    ],
+  },
+  {
+    id: "002",
+    period: "Ongoing",
+    role: "Version control and clean history",
+    points: [
+      "Write descriptive commit messages with type prefixes such as feat, fix and style.",
+      "Work over SSH and keep every project public, so my history can be read from the first commit.",
+    ],
+  },
+  {
+    id: "003",
+    period: "2026",
+    role: "Data and access control",
+    points: [
+      "Model data with Prisma and build role-based access for a crop field monitoring system.",
+      "Keep secrets such as database URLs in environment variables, out of the repository.",
+    ],
+  },
+  {
+    id: "004",
+    period: "2026",
+    role: "Interfaces that work for everyone",
+    points: [
+      "Build keyboard friendly components, such as an accordion with proper aria attributes.",
+      "Respect reduced motion settings and design layouts that work on phones first.",
+    ],
+  },
+  {
+    id: "005",
+    period: "2024",
+    role: "Bachelor of Business Information Technology (BBIT)",
+    points: [
+      "Studied information systems,business and supply chain.",
+      
+    ],
+  },
 ];
 
 export const builds = [
@@ -44,7 +87,7 @@ export const builds = [
   },
   {
     quote:
-      "My projects evolve as I learn — from experimenting with new stacks to improving existing applications and exploring new ideas.",
+      "My projects evolve as I learn  from experimenting with new stacks to improving existing applications and exploring new ideas.",
     name: "Explore",
     role: "Current work and future projects.",
   },
@@ -59,10 +102,10 @@ image?: string;
 };
 
 export const projects: Project[] = [
-  { name: "Job Pulse",image: "/.png", desc: "Job application tracker with a user-friendly UI, filters and charts.", stack: ["Next.js", "Tailwind"], href: "(coming soon)." },
-  { name: "SmartSeason",image: "/farm.png", desc: "Role-based crop field monitoring system.", stack: ["Next.js", "Prisma", "TypeScript"], href: "(coming soon)." },
-  { name: "tractor-online-store", desc: "An e-commerce platform where you can sell second hand tractors and agricultural equipments ", stack: ["Next.js"], href: "https://github.com/iam-amani/farm-flow" },
-  { name: "Ikonex School Management", desc: "School management application.", stack: ["Next.js"], href: "https://github.com/iam-amani/ikonex-school-management-application-" },
+  { name: "Job Pulse",image: "/job-pulse.jpg", desc: "Job application tracker with a user-friendly UI, filters and charts.", stack: ["Next.js", "Tailwind"], href: "/coming-soon" },
+  { name: "SmartSeason",image: "/farm.png", desc: "Role-based crop field monitoring system.", stack: ["Next.js", "Prisma", "TypeScript"], href: "https://github.com/iam-amani/farm-flow" },
+  { name: "tractor-online-store",image: "/ecommerce.jpg", desc: "An e-commerce platform where you can sell second hand tractors and agricultural equipments ", stack: ["Next.js"], href: "https://github.com/iam-amani/tractor-online-store.git" },
+  { name: "Ikonex School Management",image: "/ikonex.jpg", desc: "School management application.", stack: ["Next.js"], href: "https://github.com/iam-amani/ikonex-school-management-application-" },
 ];
 
 
