@@ -10,7 +10,7 @@ export type Post = {
   slug: string;
   title: string;
   summary: string;
-  tldr: string;
+  intro: string;
   date: string; 
   tags: string[];
   cover?: string; 
@@ -55,18 +55,18 @@ export function readingTime(post: Post) {
 
 export const posts: Post[] = [
   {
-    slug: "read-my-git-log",
-    title: "Read My Git Log: What My Commits Say About How I Work",
+    slug: "git-log-flow",
+    title: "Reading Your Git Logs: What Your Commits Say About How You Work",
     summary:
-      "A look through my commit history and what the small decisions in my Git log reveal about how I build.",
-    tldr:
-      "Your Git history is more than a list of changes. It shows how you think, what you revisit, and whether you can explain your own work.",
+      "A look through your commit history and what the small decisions in your Git log reveal about how you build.",
+    intro:
+      "Your Git history is more than a list of changes. It shows how you think, what you revisit and whether you can explain your own work.",
     date: "2026-10-02",
     tags: ["Git", "Process", "Portfolio"],
     content: [
       {
         type: "p",
-        text: "I used to think of a commit message as something I wrote because Git required one. Looking back at my projects, I see something different: the commit history is a record of how I actually work.",
+        text: "I used to think of a commit message as something I wrote because Git required one. Looking back at my projects, I see something different  the commit history is a record of how I actually work.",
       },
       {
         type: "h2",
@@ -74,7 +74,7 @@ export const posts: Post[] = [
       },
       {
         type: "p",
-        text: "Open a repository and read the commits from the beginning. You can often see the project changing direction: a first idea, a new component, a redesign, a bug fix, or a feature that was clearly revisited later.",
+        text: "Opening a repository and reading the commits from the beginning. You should often see the project changing direction a first idea, a new component, a redesign, a bug fix or a feature that was clearly revisited later.",
       },
       {
         type: "h2",
@@ -98,7 +98,7 @@ git show <commit>`,
       },
       {
         type: "p",
-        text: "A portfolio shows the finished result. Git shows the process behind it. That process can reveal whether I build in small steps, whether I revisit decisions, and whether I can explain what changed.",
+        text: "A portfolio shows the finished result. Git shows the process behind it. That process can reveal whether I build in small steps, whether I revisit decisions and whether I can explain what changed.",
       },
       {
         type: "aside",
@@ -114,7 +114,7 @@ git show <commit>`,
           "Say what actually changed.",
           "Keep commits focused on one meaningful change when possible.",
           "Read the message once before pressing Enter.",
-          "Treat the history as part of the project, not disposable text.",
+          "Treat the history as part of the project not disposable text.",
         ],
       },
     ],
@@ -125,8 +125,8 @@ git show <commit>`,
     title: "The Stack Reset: Restructuring My Projects Around New Technologies",
     summary:
       "What happens when I revisit an old project and decide the original stack no longer matches what I want to learn.",
-    tldr:
-      "Changing a stack can be useful when it has a reason. The goal is not to use newer technology; it is to understand why the change makes the project better for me.",
+    intro:
+      "Changing a stack can be useful when it has a reason. The goal is not to use newer technology it is to understand why the change makes the project better for me.",
     date: "2026-10-01",
     tags: ["Projects", "Learning", "Tech Stack"],
     content: [
@@ -183,7 +183,7 @@ git show <commit>`,
     title: "Build With Your Projects, Not Just With Tutorials",
     summary:
       "Why repeatedly opening, changing, breaking, fixing, and improving my own projects has become part of how I learn.",
-    tldr:
+    intro:
       "Tutorials can show you a path. Your own project forces you to make decisions when the path is no longer written for you.",
     date: "2026-09-30",
     tags: ["Projects", "Learning", "Practice"],
@@ -230,63 +230,14 @@ git show <commit>`,
     ],
   },
 
-  {
-    slug: "the-ai-trap",
-    title: "The AI Trap: Being the Smart Student With Zero Guidance",
-    summary:
-      "AI can make a beginner feel extremely productive while quietly removing the struggle that produces understanding.",
-    tldr:
-      "AI is useful when it helps me think. It becomes a trap when it replaces the thinking I was supposed to practice.",
-    date: "2026-09-29",
-    tags: ["AI", "Learning", "Developing"],
-    content: [
-      {
-        type: "p",
-        text: "Being the student who can get an answer quickly feels good. With AI, I can ask for a component, an explanation, a fix, a refactor, or an entire feature. The dangerous part is that a working answer can arrive before I have understood the problem.",
-      },
-      {
-        type: "h2",
-        text: "The smart-student feeling",
-      },
-      {
-        type: "p",
-        text: "I can read generated code and recognize many of the words. That can create the feeling that I understand it. But recognizing code is not the same as being able to produce the idea myself.",
-      },
-      {
-        type: "h2",
-        text: "Zero guidance is still a problem",
-      },
-      {
-        type: "p",
-        text: "AI can provide unlimited guidance, but it cannot decide what I personally need to understand next. If I keep asking it to remove every difficult part, I can end up with a project that is ahead of my actual ability.",
-      },
-      {
-        type: "h2",
-        text: "The questions I should ask first",
-      },
-      {
-        type: "list",
-        items: [
-          "What exactly is the problem?",
-          "What do I already understand?",
-          "What have I tried?",
-          "Can I explain the error in my own words?",
-          "Can I attempt a solution before seeing one?",
-        ],
-      },
-      {
-        type: "aside",
-        text: "The goal is not to avoid AI. The goal is to avoid becoming dependent on the answer.",
-      },
-    ],
-  },
+  
 
   {
     slug: "reality-check",
     title: "Reality Check: Where I Actually Am",
     summary:
       "A personal check-in about separating what I can do from what I only recognize, and building from reality instead of comparison.",
-    tldr:
+    intro:
       "Knowing where I actually stand is more useful than pretending I am further ahead. A reality check gives me a starting point.",
     date: "2026-09-28",
     tags: ["Reflection", "Learning", "Career"],
@@ -313,7 +264,7 @@ git show <commit>`,
           "What can I build without copying?",
           "What can I explain without searching?",
           "What errors can I investigate myself?",
-          "Which parts still require step-by-step guidance?",
+          "Which parts still require step by step guidance?",
           "What have I actually built and maintained?",
         ],
       },
@@ -337,7 +288,7 @@ git show <commit>`,
     title: "Choosing Your Learning Tools",
     summary:
       "How I think about choosing courses, documentation, projects, videos, AI, and other tools without turning learning into endless tool hunting.",
-    tldr:
+    intro:
       "Choose a learning tool because it solves the problem you have right now, not because everyone online is using it.",
     date: "2026-09-27",
     tags: ["Learning", "Tools", "Developing"],
@@ -384,7 +335,7 @@ git show <commit>`,
     title: "The Internet Has Too Many Ideas",
     summary:
       "There is always another framework, project idea, roadmap, and tutorial. Sometimes the hardest part is deciding what not to follow.",
-    tldr:
+    intro:
       "More ideas do not automatically create more progress. Sometimes I need to stop consuming possibilities and sit with the one thing I already chose.",
     date: "2026-09-26",
     tags: ["Focus", "Learning", "Reflection"],
@@ -425,11 +376,11 @@ git show <commit>`,
   },
 
   {
-    slug: "nothing-to-prove",
-    title: "Nothing to Prove",
+    slug: "you-should-vs-you-must",
+    title: "Dilemma behind a growing industry",
     summary:
-      "A reminder to stop building for comparison and start building for understanding, consistency, and my own direction.",
-    tldr:
+      "A reminder to stop building for comparison and start building for understanding, consistency and my own direction.",
+    intro:
       "I do not need to prove that I know every framework, build every idea, or move as fast as someone else. I need to keep becoming more capable.",
     date: "2026-09-25",
     tags: ["Reflection", "Career", "Learning"],
