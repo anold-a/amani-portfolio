@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import {Space_Grotesk, Inter, JetBrains_Mono,Caveat , Manrope} from "next/font/google";
 import "./globals.css";
 
+
 const grotesk = Space_Grotesk({ subsets: ["latin"], variable: "--font-grotesk" });   
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });               
 const jetbrains = JetBrains_Mono({ subsets: ["latin"], variable: "--font-jetbrains" });

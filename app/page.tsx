@@ -7,6 +7,7 @@ import Experience from "@/components/homepage/Experience";
 import Builds from "@/components/homepage/Builds";
 import Projects from "@/components/homepage/Projects";
 import Contact from "@/components/homepage/Contact";
+import { Analytics } from "@vercel/analytics/next"
 import Footer from "@/components/homepage/Footer";
 import Cursor from "@/components/homepage/Cursor";
 import Blogs from "@/components/homepage/Blogs";
@@ -28,6 +29,7 @@ export default function Home() {
     <Footer />
     <Cursor />
     <WelcomeBanner />
+    <Analytics />
     </>
     
   );

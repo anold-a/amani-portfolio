@@ -3,6 +3,7 @@ import BlogHeader from "@/components/homepage/blog/BlogHeader";
 import BlogIndex from "@/components/homepage/blog/BlogIndex";
 import { sortedPosts, toMeta } from "@/lib/posts";
 
+
 export const metadata: Metadata = {
   title: "Notebook | Arnold Amani",
   description: "Notes and write-ups on web development, tooling and learning in public.",
