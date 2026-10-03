@@ -26,7 +26,7 @@ export default function WelcomeBanner(){
     }, 3000);
 
     const hideTimer = setTimeout(() => {
-      setIsVisible(false);
+      setIsVisible(false); 
     }, 6000);
 
    return () =>{
