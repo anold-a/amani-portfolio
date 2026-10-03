@@ -20,7 +20,7 @@ export default function SharedUI({
        <span className="font-display text-sm font-bold text-brand">{index}</span>
         {note && <span className="font-display text-2xl ">{note}</span>}
     </p>
-    <h2 className="mt-1 max-w-3xl font-display text-3xl font-bold  sm:text-5xl">
+    <h2 className="mt-1 max-w-2xl  text-2xl font-bold  sm:text-4xl">
            {title}
          </h2>
    
