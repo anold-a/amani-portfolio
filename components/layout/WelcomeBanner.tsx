@@ -3,15 +3,25 @@
 
 import { useState,useEffect } from "react";
 import confetti from 'canvas-confetti';
+const SEEN_KEY = "welcome-banner-seen";
+
 
 export default function WelcomeBanner(){
 
   const [text,setText] = useState("Detecting a visitor...");
   const [isLoading, setIsLoading] = useState(true);
-  const [isVisible,setIsVisible] = useState(true);
+  const [isVisible,setIsVisible] = useState(false);
 
   useEffect(() =>{
 
+    let alreadySeen = false;
+    try {
+      alreadySeen = sessionStorage.getItem(SEEN_KEY) === "1";
+    } catch {
+      
+    }
+    if (alreadySeen) return;
+    setIsVisible(true);
     const textTimer = setTimeout(() => {
       setIsLoading(false);
          setText("Thank you for visiting my portifolio");
@@ -27,6 +37,11 @@ export default function WelcomeBanner(){
 
     const hideTimer = setTimeout(() => {
       setIsVisible(false); 
+      try {
+        sessionStorage.setItem(SEEN_KEY, "1"); 
+      } catch {
+        
+      }
     }, 6000);
 
    return () =>{
