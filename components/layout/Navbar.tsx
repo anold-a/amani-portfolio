@@ -47,7 +47,7 @@ export default function Navbar() {
       <div className="fixed left-0 top-0 z-70 h-1 bg-accent" style={{ width: `${progress * 100}%` }} />
       <nav className="fixed left-1/2 top-4 z-50 flex max-w-[94vw] -translate-x-1/2 items-center gap-1 overflow-x-auto rounded-xl border border-line bg-card/85 p-1.5 ">
         {links.map(({ id, label, Icon }) => (
-          <a
+          <Link
             key={id}
             href={`#${id}`}
             aria-label={label}
@@ -57,16 +57,16 @@ export default function Navbar() {
           >
             <Icon size={16} />
             <span className="hidden lg:inline">{label}</span>
-          </a>
+          </Link>
         ))}
-        <a
-          href={profile.resume}
+        <Link
+          href="/"
           target="_blank"
           rel="noreferrer"
           className="ml-1 flex shrink-0 items-center gap-2 rounded-full border-2 border-ink px-3 py-2 text-sm font-bold"
         >
           <span className="hidden sm:inline">Résumé</span> <ExternalLink size={14} />
-        </a>
+        </Link>
       </nav>
     </>
   );
