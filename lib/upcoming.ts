@@ -25,8 +25,8 @@ export const upcoming: Upcoming[] = [
     steps: [
       { label: "Data model", done: true },
       { label: "Sign-in and roles", done: true },
-      { label: "Field and crop screens", done: false },
-      { label: "Reports", done: false },
+      { label: "Field and crop screens", done: true },
+      { label: "Reports", done: true },
       { label: "Deploy and test with real users", done: false },
     ],
   },
