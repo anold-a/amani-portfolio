@@ -99,13 +99,14 @@ desc: string;
 stack: string[];
 href: string;
 image?: string;
+status?: "in-progress" | "completed";
 };
 
 export const projects: Project[] = [
-  { name: "Job Pulse",image: "/job-pulse-hero.png", desc: "Job application tracker with a user-friendly UI, filters and charts.", stack: ["Next.js", "Tailwind"], href: "/coming-soon" },
-  { name: "SmartSeason",image: "/farm.png", desc: "Role-based crop field monitoring system.", stack: ["Next.js", "Prisma", "TypeScript"], href: "https://github.com/iam-amani/farm-flow" },
-  { name: "tractor-online-store",image: "/tractor-store.png", desc: "An e-commerce platform where you can sell second hand tractors and agricultural equipments ", stack: ["Next.js"], href: "https://github.com/iam-amani/tractor-online-store.git" },
-  { name: "Ikonex School Management",image: "/elimu-bora.png", desc: "School management application.", stack: ["HTML,CSS,JAVASCRIPT"], href: "https://github.com/iam-amani/ikonex-school-management-application-" },
+  { name: "Job Pulse",image: "/job-pulse-hero.png", desc: "Job application tracker with a user-friendly UI, filters and charts.", stack: ["Next.js", "Tailwind"],href: "", status: "in-progress",},
+  { name: "SmartSeason",image: "/farm.png", desc: "Role-based crop field monitoring system.", stack: ["Next.js", "Prisma", "TypeScript"], href: "", status: "in-progress",},
+  { name: "tractor-online-store",image: "/tractor-store.png", desc: "An e-commerce platform where you can sell second hand tractors and agricultural equipments ", stack: ["Next.js"], href: "https://github.com/iam-amani/tractor-online-store.git", status: "completed", },
+  { name: "Ikonex School Management",image: "/elimu-bora.png", desc: "School management application.", stack: ["HTML,CSS,JAVASCRIPT"], href: "https://github.com/iam-amani/ikonex-school-management-application-", status: "completed", },
 ];
 
 
