@@ -8,7 +8,7 @@ export default function Bio() {
       <div className="grid gap-10 md:grid-cols-[1.2fr_1fr]">
         <div className="space-y-6 text-xl leading-relaxed text-ink/80">
          <p className="font-display text-3xl ">
-           Full-stack developer.
+           Developer
          </p>
           {profile.bio.map((p) => (
             <p key={p}>{p}</p>
