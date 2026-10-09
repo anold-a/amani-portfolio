@@ -88,4 +88,12 @@ section[id] { scroll-margin-top: 2rem; }
   border-color: var(--ink);
 }
 
+.project-image-overlay {
+  opacity: 0;
+  transition: opacity 300ms ease;
+}
+
+.project-image:hover .project-image-overlay {
+  opacity: 1;
+}
  
