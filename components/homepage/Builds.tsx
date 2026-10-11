@@ -6,7 +6,7 @@ import Link from "next/link";
 
 export default function Builds() {
   return (
-    <SharedUI id="refs" index="04" note="kind words" title={<> Building . <span className="italic">Exploring</span></>}>
+    <SharedUI id="refs" scramble title={<> Building . <span>Exploring</span></>}>
       <div className="grid gap-6 md:grid-cols-2">
         {builds.map((build, index) => (
           <figure key={index} className="rounded-xl border border-line bg-card p-8">

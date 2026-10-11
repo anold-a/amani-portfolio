@@ -47,7 +47,7 @@ export default async function PostPage({ params }: Props) {
               <span className="flex items-center gap-2"><Calendar size={14} /> {formatDate(post.date)}</span>
               <span className="flex items-center gap-2"><Clock size={14} /> {readingTime(post)} min read</span>
             </p>
-            <h1 className="mt-4 max-w-3xl font-display text-4xl font-black leading-[1.08] tracking-tight sm:text-6xl">
+            <h1 className="mt-1 max-w-2xl text-2xl font-normal sm:text-4xl">
               {post.title}
             </h1>
             <p className="mt-4 max-w-2xl text-lg text-muted">{post.summary}</p>
@@ -57,7 +57,7 @@ export default async function PostPage({ params }: Props) {
           </header>
 
           <div className="mt-10 max-w-3xl -rotate-1 rounded-sm  backdrop-blur-md shadow-2xl border border-white/20 p-6">
-            <span className="font-bold text-3xl leading-none ">context</span>
+            <span className="mt-1 max-w-2xl text-2xl font-normal sm:text-4xl">context</span>
             <p className="mt-1 text-sm">{post.intro}</p>
           </div>
 

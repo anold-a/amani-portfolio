@@ -22,11 +22,10 @@ export default function Projects() {
   return (
     <SharedUI
       id="projects"
-      index="05"
-      note="fresh from the editor"
+      scramble
       title={
         <>
-          Things I <span className="italic">built</span>
+          Things I <span>built</span>
         </>
       }
     >

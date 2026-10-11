@@ -1,10 +1,16 @@
 import SharedUI from "@/components/layout/SharedUI";
 import { profile,stats } from "@/lib/data";
+import ScrambleText from "../layout/ScrambleText";
 
 
 export default function Bio() {
   return (
-    <SharedUI index="01" id="bio" note="hello there" title={<>A bit <span className="italic">about me</span></> }>
+    <SharedUI  id="bio"  scramble
+  title={
+    <>
+      A bit <span className="italic">about me</span>
+    </>
+  }>
       <div className="grid gap-10 md:grid-cols-[1.2fr_1fr]">
         <div className="space-y-6 text-xl leading-relaxed text-ink/80">
          <p className="font-display text-3xl ">

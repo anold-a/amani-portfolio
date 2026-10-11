@@ -8,7 +8,7 @@ import Link from "next/link";
 export default function Blogs() {
   const latest = sortedPosts.slice(0, 4).map(toMeta);
   return (
-    <SharedUI id="blogs" index="06" note="thinking out loud" title={<>Notes and <span className="itaalic">write-ups</span></>}>
+    <SharedUI id="blogs" scramble title={<>Notes and <span>write ups</span></>}>
       <div className="grid gap-6 md:grid-cols-2">
         {latest.map((p, i) => (
           <Reveal key={p.slug} delay={i * 80}>
@@ -17,7 +17,7 @@ export default function Blogs() {
                 <span className="flex items-center gap-2"><Calendar size={14} /> {p.dateLabel}</span>
                 <span className="flex items-center gap-2"><Clock size={14} /> {p.minutes} min</span>
               </div>
-              <h3 className="mt-5 font-display text-xl font-semibold transition group-hover:text-brand">{p.title}</h3>
+              <h3 className="mt-1 text-50 font-normal sm:text-xl transition text-brand">{p.title}</h3>
               <p className="mt-2 text-muted">{p.summary}</p>
               <div className="mt-4 flex flex-wrap gap-2">
                 {p.tags.map((t) => <Tag key={t}>{t}</Tag>)}

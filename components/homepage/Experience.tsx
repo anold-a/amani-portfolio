@@ -5,7 +5,7 @@ import { experience } from "@/lib/data";
 
 export default function Experience() {
   return (
-    <SharedUI id="exp" index="03" note="the journey so far" title={<>Work <span className="italic">history</span></>}>
+    <SharedUI id="exp" scramble  title={<>Work <span>history</span></>}>
       <ol className="relative before:absolute before:left-5 before:top-0 before:h-full before:w-0.5 before:bg-line md:before:left-1/2 md:before:-translate-x-1/2">
         {experience.map((e, i) => {
           const right = i % 2 === 1;

@@ -19,7 +19,7 @@ const pill =
 
 export default function Contact() {
   return (
-    <SharedUI id="contact" index="07" note="do not be shy" title={<>Say <span className="italic">hello</span></>}>
+    <SharedUI id="contact" scramble  title={<>Say <span>hello</span></>}>
       <div className="grid items-center gap-10 md:grid-cols-2">
         <div>
           <h3 className="font-display text-4xl font-black leading-[1.05] tracking-tight sm:text-5xl">

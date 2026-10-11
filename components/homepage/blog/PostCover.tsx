@@ -27,7 +27,7 @@ export default function PostCover({
           />
           <span
             aria-hidden
-            className="absolute -bottom-10 -right-2 font-display text-[12rem] font-black leading-none text-bg/15"
+            className="mt-1 max-w-2xl text-2xl font-normal sm:text-4xl"
           >
             {title[0]}
           </span>
