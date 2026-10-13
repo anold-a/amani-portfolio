@@ -1,7 +1,11 @@
+"use client"
+
 import { Send, MessageCircle,} from "lucide-react";
 import SharedUI from "@/components/layout/SharedUI";
 import CopyEmail from "@/components/homepage/CopyEmail";
 import { profile } from "@/lib/data";
+import { FormEvent, useState } from "react";
+import { verifyPassword } from '@/app/actions'; 
 
 
 function GithubIcon({ size = 16 }: { size?: number }) {
@@ -18,6 +22,61 @@ const pill =
   
 
 export default function Contact() {
+  const [authorized,setAuthorized] = useState(false);
+
+  const handleSubmit = async(event: FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+
+
+    const passwordInput = event.currentTarget.querySelector('input[type="password"]') as HTMLInputElement | null;
+    if (!passwordInput) return;
+ const isCorrect = await verifyPassword(passwordInput.value);
+
+    if (isCorrect) {
+      setAuthorized(true);
+    } else {
+      passwordInput.value = ""; 
+      alert("Wrong answer!");
+    }
+  }
+
+  const login = (
+  <form onSubmit={handleSubmit} className="flex items-center gap-2 w-full max-w-sm">
+    <input 
+      type="password" 
+      placeholder="What is today?"
+      className="px-4 py-2 text-sm rounded-full border border-neutral-300 bg-transparent focus:outline-none focus:border-neutral-500 placeholder-neutral-400 w-full max-w-37.5"
+    />
+    <button 
+      type="submit" 
+      className="px-4 py-2 text-xs font-semibold text-white bg-[#1A1512] hover:bg-neutral-800 transition-colors rounded-full uppercase tracking-wider h-9.5 flex items-center justify-center"
+    >
+      Reveal
+    </button>
+  </form>
+);
+
+
+const contactInfo = (
+  <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-2">
+    
+    <CopyEmail email={profile.email} />
+    
+    <a 
+      href={profile.whatsapp} 
+      target="_blank" 
+      rel="noreferrer" 
+      className={`${pill} flex items-center justify-center gap-2 h-10`} 
+    >
+      <MessageCircle size={16} /> WhatsApp
+    </a>
+  </div>
+);
+
+
+
+
+
   return (
     <SharedUI id="contact" scramble  title={<>Say <span>hello</span></>}>
       <div className="grid items-center gap-10 md:grid-cols-2">
@@ -27,7 +86,7 @@ export default function Contact() {
             <br />
             <span className="text-brand">Let&apos;s build it.</span>
           </h3>
-          <p className="mt-6 max-w-md border-l-4 border-accent pl-4 text-lg text-muted">
+          <p className="mt-6 max-w-md  pl-4 text-lg text-muted">
             I am open to collaborations, freelance work and full-time roles. Send a message and I will reply as soon as I can.
           </p>
         </div>
@@ -42,15 +101,31 @@ export default function Contact() {
           <p className="my-5 flex items-center gap-3 text-xs font-bold uppercase tracking-widest text-muted">
             <span className="h-px flex-1 bg-line" /> or connect via <span className="h-px flex-1 bg-line" />
           </p>
-          <div className="grid gap-3 sm:grid-cols-3">
-            <CopyEmail email={profile.email} />
-            <a href={profile.whatsapp} target="_blank" rel="noreferrer" className={pill}>
-              <MessageCircle size={16} /> WhatsApp
-            </a>
-            <a href={profile.github} target="_blank" rel="noreferrer" className={pill}>
-              <GithubIcon size={16} /> GitHub
-            </a>
-          </div>
+          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 w-full min-h-11">
+  
+  <p className="text-xs sm:text-sm text-neutral-600 font-medium leading-relaxed max-w-50 shrink-0">
+    {authorized ? "Let us connect" : "Master Oogway"}
+  </p>
+
+  
+  <div className="flex flex-row items-center justify-start sm:justify-center gap-2 grow">
+  {authorized ? contactInfo : login}
+</div>
+
+ 
+  <div className="flex justify-start sm:justify-end shrink-0">
+    <a 
+      href={profile.github} 
+      target="_blank" 
+      rel="noreferrer" 
+      className={`${pill} flex items-center gap-2`}
+    >
+      <GithubIcon size={16} /> GitHub
+    </a>
+  </div>
+</div>
+
+
         </div>
       </div>
     </SharedUI>

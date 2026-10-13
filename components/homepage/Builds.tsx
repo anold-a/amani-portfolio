@@ -10,7 +10,7 @@ export default function Builds() {
       <div className="grid gap-6 md:grid-cols-2">
         {builds.map((build, index) => (
           <figure key={index} className="rounded-xl border border-line bg-card p-8">
-            <blockquote className="border-l-4 border-brand pl-4 text-lg text-muted">{build.quote}</blockquote>
+            <blockquote className=" pl-4 text-lg text-muted">{build.quote}</blockquote>
             <figcaption className="mt-6">
               <p className="font-display font-semibold">{build.name}</p>
               <p className="text-sm text-muted">{build.role}</p>

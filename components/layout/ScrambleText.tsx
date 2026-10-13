@@ -13,6 +13,7 @@ export default function ScrambleText({
 }) {
   const ref = useRef<HTMLSpanElement>(null);
   const [key, setKey] = useState(0);
+    const [isMounted, setIsMounted] = useState(false);
 
   useEffect(() => {
     const element = ref.current;
@@ -31,10 +32,22 @@ export default function ScrambleText({
     return () => observer.disconnect();
   }, []);
 
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
+
   return (
-    <span ref={ref}>
-      <ScrambleContent key={key}>{children}</ScrambleContent>
+    <span
+    >
+      {isMounted ? (
+       
+        <ScrambleContent key={key}>{children}</ScrambleContent>
+      ) : (
+        
+        children
+      )}
     </span>
+  
   );
 }
 
