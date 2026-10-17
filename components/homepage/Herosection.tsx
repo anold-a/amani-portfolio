@@ -37,7 +37,7 @@ export default function Hero() {
             <span className="ml-1 inline-block h-5 w-2 translate-y-1 animate-pulse bg-brand" />
           </p>
           
-          <p className="mt-6 max-w-md border-l-4 border-accent pl-4 text-lg italic text-muted">“{profile.tagline}”</p>
+          <p className="mt-6 max-w-md  pl-4 text-lg italic text-muted">“{profile.tagline}”</p>
 
           
           <div className="mt-10 flex flex-wrap gap-4">
@@ -67,16 +67,8 @@ export default function Hero() {
               priority
               sizes="(min-width: 768px) 384px, 90vw"
               className="object-cover grayscale"
-            />
-            {floaters.map(({ Icon, pos }, i) => (
-            <div key={i} className={`absolute ${pos} grid size-12 place-items-center rounded-xl border border-line bg-card text-brand `}>
-              <Icon size={20} />
-            </div>
-          ))}
+            />   
           </div>
-          <span className="absolute -bottom-4 -left-4 -rotate-6 rounded-full bg-brand px-4 py-2 font-mono text-xs font-bold text-bg">
-            SOFTWARE DEV. iam_amani
-          </span>
         </div>
       </div>
 
