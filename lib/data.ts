@@ -104,7 +104,7 @@ github?: string;
 };
 
 export const projects: Project[] = [
-  { name: "Job Pulse",image: "/job-pulse-hero.png", desc: "Job application tracker with a user-friendly UI, filters and charts.", stack: ["Next.js", "Tailwind"],href: "https://github.com/anold-a/job-pulse.git",github:"https://github.com/anold-a/job-pulse.git"},
+  { name: "Job Pulse",image: "/job-pulse-hero.webp", desc: "Job application tracker with a user-friendly UI, filters and charts.", stack: ["Next.js", "Tailwind"],href: "https://github.com/anold-a/job-pulse.git",github:"https://github.com/anold-a/job-pulse.git"},
   { name: "SmartSeason",image: "/farm.png", desc: "Role-based crop field monitoring system.", stack: ["Next.js", "Prisma", "TypeScript"], href: "https://github.com/anold-a/farm-flow.git",github:"https://github.com/anold-a/farm-flow.git"},
   
 ];
