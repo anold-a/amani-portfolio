@@ -41,14 +41,14 @@ export default function Hero() {
 
           
           <div className="mt-10 flex flex-wrap gap-4">
-            <Link href="#projects" className="flex items-center gap-2 rounded-full bg-brand px-6 py-3 font-semibold text-bg">
+            <Link href="#projects" className="flex items-center gap-2 rounded-lg bg-brand px-6 py-3 font-semibold text-bg">
               See my work <ArrowDownRight size={18} />
             </Link>
             <Link
               href={profile.resume}
               target="_blank"
               rel="noreferrer"
-              className="flex items-center gap-2 rounded-full border border-line px-6 py-3 font-semibold transition hover:border-brand hover:text-brand"
+              className="flex items-center gap-2 rounded-lg border border-line px-6 py-3 font-semibold transition hover:border-brand hover:text-brand"
             >
               <FileText size={18} /> Curriculum Vitae
             </Link>

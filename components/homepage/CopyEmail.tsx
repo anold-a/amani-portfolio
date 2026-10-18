@@ -20,7 +20,7 @@ export default function CopyEmail({ email }: { email: string }) {
     <button
       type="button"
       onClick={copy}
-      className="flex items-center justify-center gap-2 rounded-full border border-line bg-card px-5 py-3 text-sm font-semibold transition hover:border-ink"
+      className="flex items-center justify-center gap-2 rounded-xl border border-line bg-card px-1 py-1 text-sm font-semibold transition hover:border-ink"
     >
       {copied ? <Check size={16} /> : <Copy size={16} />} {copied ? "Copied!" : "Copy email"}
     </button>

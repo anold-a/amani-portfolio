@@ -45,11 +45,11 @@ export default function Contact() {
     <input 
       type="password" 
       placeholder="What is today?"
-      className="px-4 py-2 text-sm rounded-full border border-neutral-300 bg-transparent focus:outline-none focus:border-neutral-500 placeholder-neutral-400 w-full max-w-37.5"
+      className="px-4 py-2 text-sm rounded-lg border border-neutral-300 bg-transparent focus:outline-none focus:border-neutral-500 placeholder-neutral-400 w-full max-w-37.5"
     />
     <button 
       type="submit" 
-      className="px-4 py-2 text-xs font-semibold text-white bg-[#1A1512] hover:bg-neutral-800 transition-colors rounded-full uppercase tracking-wider h-9.5 flex items-center justify-center"
+      className="px-4 py-2 text-xs font-semibold text-white bg-[#1A1512] hover:bg-neutral-800 transition-colors rounded-lg uppercase tracking-wider h-9.5 flex items-center justify-center"
     >
       Reveal
     </button>
@@ -60,13 +60,13 @@ export default function Contact() {
 const contactInfo = (
   <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-2">
     
-    <CopyEmail email={profile.email} />
+    <CopyEmail  email={profile.email} />
     
     <a 
       href={profile.whatsapp} 
       target="_blank" 
       rel="noreferrer" 
-      className={`${pill} flex items-center justify-center gap-2 h-10`} 
+      className={`${pill} flex items-center rounded-xl justify-center gap-2 h-10`} 
     >
       <MessageCircle size={16} /> WhatsApp
     </a>
@@ -113,12 +113,12 @@ const contactInfo = (
 </div>
 
  
-  <div className="flex justify-start sm:justify-end shrink-0">
+  <div className="flex justify-start  sm:justify-end shrink-0">
     <a 
       href={profile.github} 
       target="_blank" 
       rel="noreferrer" 
-      className={`${pill} flex items-center gap-2`}
+      className={`${pill} flex items-center rounded-xl justify-center gap-2 h-10`}
     >
       <GithubIcon size={16} /> GitHub
     </a>

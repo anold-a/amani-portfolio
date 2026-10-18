@@ -51,7 +51,7 @@ export default function Navbar() {
             key={id}
             href={`#${id}`}
             aria-label={label}
-            className={`flex shrink-0 items-center gap-2 rounded-full px-3 py-2 text-sm font-semibold transition ${
+            className={`flex shrink-0 items-center gap-2 rounded-lg px-3 py-2 text-sm font-semibold transition ${
               active === id ? "bg-brand text-bg" : "text-ink/70 hover:bg-line/60 hover:text-ink"
             }`}
           >
@@ -63,7 +63,7 @@ export default function Navbar() {
           href="/"
           target="_blank"
           rel="noreferrer"
-          className="ml-1 flex shrink-0 items-center gap-2 rounded-full border-2 border-ink px-3 py-2 text-sm font-bold"
+          className="ml-1 flex shrink-0 items-center gap-2 rounded-lg border-2 border-ink px-3 py-2 text-sm font-bold"
         >
           <span className="hidden sm:inline">Résumé</span> <ExternalLink size={14} />
         </Link>

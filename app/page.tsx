@@ -11,7 +11,7 @@ import { Analytics } from "@vercel/analytics/next"
 import Footer from "@/components/homepage/Footer";
 import Cursor from "@/components/homepage/Cursor";
 import Blogs from "@/components/homepage/Blogs";
-import WelcomeBanner from "@/components/layout/WelcomeBanner";
+
 
 
 export default function Home() {
@@ -28,7 +28,6 @@ export default function Home() {
     <Contact />
     <Footer />
     <Cursor />
-    <WelcomeBanner />
     <Analytics />
     </>
     
