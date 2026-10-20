@@ -7,7 +7,7 @@ import Image from "next/image";
 
 export default function Certs() {
   return (
-    <SharedUI id="certs" scramble  title={<>Learning, <span>certified</span></>}> 
+    <SharedUI id="certs" index={<>Continous Path</>} scramble  title={<>Learning, <span>certified</span></>}> 
       <div className="grid gap-5 md:grid-cols-2">
         {certs.map((c, i) => (
           <Reveal key={c.title} delay={i * 100}> 

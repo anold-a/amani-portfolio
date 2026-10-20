@@ -22,6 +22,7 @@ export default function Projects() {
   return (
     <SharedUI
       id="projects"
+      index={<>Projects In Action</>}
       scramble
       title={
         <>

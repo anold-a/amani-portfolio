@@ -8,7 +8,7 @@ import Link from "next/link";
 export default function Blogs() {
   const latest = sortedPosts.slice(0, 4).map(toMeta);
   return (
-    <SharedUI id="blogs" scramble title={<>Notes and <span>write ups</span></>}>
+    <SharedUI id="blogs" index ={<>The Desk</>} scramble title={<>Notes and <span>write ups</span></>}>
       <section
   aria-label="Latest resources"
   className="grid grid-cols-1 gap-5 md:grid-cols-2 md:gap-6"

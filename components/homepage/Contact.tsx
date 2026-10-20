@@ -78,7 +78,7 @@ const contactInfo = (
 
 
   return (
-    <SharedUI id="contact" scramble  title={<>Say <span>hello</span></>}>
+    <SharedUI id="contact" index={<>Do not be a stranger</>} scramble  title={<>Say <span>hello</span></>}>
       <div className="grid items-center gap-10 md:grid-cols-2">
         <div>
           <h3 className="font-display text-4xl font-black leading-[1.05] tracking-tight sm:text-5xl">
