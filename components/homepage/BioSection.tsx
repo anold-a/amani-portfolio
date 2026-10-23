@@ -5,7 +5,7 @@ import ScrambleText from "../layout/ScrambleText";
 
 export default function Bio() {
   return (
-    <SharedUI  id="bio"  scramble
+    <SharedUI index={<>Overview</>} id="bio"  scramble
   title={
     <>
       A bit <span className="italic">about me</span>
