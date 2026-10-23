@@ -26,8 +26,26 @@ image?: string;
 
 
 export const certs: Cert[] = [
-  { title: "CITI",image: "/citi.png", desc: "Used Java to build an internal tool visualizing stock market risk in real time.", tags: ["Unified Modeling Language", "Databases & API", "Java"] },
-  { title: "Scrimba",image: "/dsa.png", desc: "Had a chance to learn,unlearn and relearn concepts around dsa by interacting with scrimba course work and challenges.", tags: ["Data Structures", "Algorithms"] },
+  {
+  title: "Scrimba",
+  image: "/dsa.png",
+  desc: "Strengthened my understanding of data structures and algorithms through interactive Scrimba coursework and hands-on coding challenges.",
+  tags: ["Data Structures", "Algorithms"]
+},
+{
+  title: "CITI",
+  image: "/citi.png",
+  desc: "Built an internal Java tool to visualize stock market risk in real time, working with databases, APIs and software design concepts.",
+  tags: ["UML", "Databases & APIs", "Java"]
+},
+{
+  title: "freeCodeCamp",
+  image: "/fc.png",
+  desc: "Developed my JavaScript skills through interactive lessons and coding projects covering core programming concepts and problem-solving.",
+  tags: ["JavaScript", "Programming", "Coding Challenges"]
+}
+ 
+  
 ];
 
 export const experience = [
