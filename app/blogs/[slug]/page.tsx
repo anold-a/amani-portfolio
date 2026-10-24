@@ -146,12 +146,8 @@ export default async function PostPage({ params }: Props) {
             </div>
 
             <aside className="lg:col-start-2 lg:row-start-1">
-              <div className="lg:sticky lg:top-28">
-                <p className="mb-4 text-xs font-bold uppercase tracking-[0.09em] text-brand">
-                  In this article
-                </p>
                 <Toc headings={headings} />
-              </div>
+              
             </aside>
           </div>
         </article>

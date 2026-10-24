@@ -1,6 +1,6 @@
 import SharedUI from "@/components/layout/SharedUI";
 import { profile,stats } from "@/lib/data";
-import ScrambleText from "../layout/ScrambleText";
+
 
 
 export default function Bio() {
