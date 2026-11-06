@@ -10,7 +10,7 @@ const links = [
   { id: "bio", label: "Bio", Icon: User },
   { id: "certs", label: "Certs", Icon: Award },
   { id: "exp", label: "Exp", Icon: Briefcase },
-  { id: "refs", label: "Refs", Icon: ThumbsUp },
+  { id: "refs", label: "Approach", Icon: ThumbsUp },
   { id: "projects", label: "Projects", Icon: Code },
   { id: "blogs", label: "Blogs", Icon: Library },
   { id: "contact", label: "Contact", Icon: Mail },
