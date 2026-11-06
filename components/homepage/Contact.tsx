@@ -101,16 +101,20 @@ const contactInfo = (
           <p className="my-5 flex items-center gap-3 text-xs font-bold uppercase tracking-widest text-muted">
             <span className="h-px flex-1 bg-line" /> or connect via <span className="h-px flex-1 bg-line" />
           </p>
-          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 w-full min-h-11">
+          <div className="flex flex-col sm:flex-row sm:items-center  gap-15 w-full min-h-11">
   
-  <p className="text-xs sm:text-sm text-neutral-600 font-medium leading-relaxed max-w-50 shrink-0">
-    {authorized ? "Let us connect" : "Master Oogway"}
-  </p>
-
+    
+    <CopyEmail  email={profile.email} />
+    
+    <a 
+      href={profile.whatsapp} 
+      target="_blank" 
+      rel="noreferrer" 
+      className={`${pill} flex items-center rounded-xl justify-center gap-2 h-10`} 
+    >
+      <MessageCircle size={16} /> WhatsApp
+    </a>
   
-  <div className="flex flex-row items-center justify-start sm:justify-center gap-2 grow">
-  {authorized ? contactInfo : login}
-</div>
 
  
   <div className="flex justify-start  sm:justify-end shrink-0">

@@ -23,7 +23,7 @@ export default function Hero() {
           </span>
 
           
-          <h1 className="mt-8 font-display text-[clamp(3.5rem,11vw,9rem)] font-bold leading-[0.9] tracking-tighter">
+          <h1 className="mt-8 font-display text-[clamp(3.5rem,11vw,7rem)] font-bold leading-[0.9] tracking-tighter">
             {profile.first}
             <br />
             <span className="relative inline-block text-brand">
