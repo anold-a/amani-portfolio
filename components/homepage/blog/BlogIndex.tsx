@@ -19,16 +19,16 @@ export default function BlogIndex({ items }: { items: PostMeta[] }) {
   return (
     <>
       <div className="mt-8 flex flex-wrap items-center gap-2" role="group" aria-label="Filter by tag">
-        <span className="mr-1 font-normal text-xl ">filter:</span>
+        
         {tags.map((t) => (
           <button
             key={t}
             type="button"
             aria-pressed={tag === t}
             onClick={() => setTag(t)}
-            className={`rounded-full border px-3 py-1 text-xs font-bold uppercase tracking-wider transition ${
+            className={`rounded-lg border  px-4 py-2 text-xs font-semibold transition ${
               tag === t
-                ? "border-ink bg-ink text-bg"
+                ? "border-brand bg-brand text-bg"
                 : "border-line text-muted hover:border-ink hover:text-ink"
             }`}
           >
@@ -52,7 +52,7 @@ export default function BlogIndex({ items }: { items: PostMeta[] }) {
               <span className="flex items-center gap-1.5"><Clock size={14} /> {featured.minutes} min read</span>
             </p>
             <span className="mt-6 inline-flex items-center gap-2 font-semibold text-brand">
-              Read the note <ArrowRight size={16} className="transition group-hover:translate-x-1" />
+              Read the blog <ArrowRight size={16} className="transition group-hover:translate-x-1" />
             </span>
           </div>
         </Link>

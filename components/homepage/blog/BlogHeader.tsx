@@ -25,9 +25,6 @@ export default function BlogHeader() {
           <Link href="/" className="flex items-center gap-2 font-semibold transition hover:text-brand">
             <ArrowLeft size={16} /> Portfolio
           </Link>
-          <Link href="/blogs" className="font-normal text-xl  transition hover:text-brand">
-            Diary
-          </Link>
         </div>
       </header>
     </>

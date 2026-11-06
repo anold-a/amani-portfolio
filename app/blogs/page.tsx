@@ -13,14 +13,11 @@ export default function BlogsPage() {
   return (
     <>
       <BlogHeader />
-      <main className="mx-auto max-w-5xl px-6 pb-20 pt-28">
-        <p className=" text-2xl text-accent">thinking out loud</p>
-        <h1 className="mt-1 font-display text-4xl font-black tracking-tight sm:text-6xl">
-          The <span>notebook</span>
-        </h1>
-        <p className="mt-4 max-w-xl text-lg text-muted">
-          Things I learned while building, written down so I do not forget them.
-        </p>
+      <main className="mx-auto max-w-5xl px-6 pb-20 pt-28">  
+        <h1 className="text-lg font-bold text-brand tracking-[0.09em] sm:text-xl">
+           <span className="text-[#b8c2d9]"> ALL</span> BLOGS
+          </h1>
+        
         <BlogIndex items={sortedPosts.map(toMeta)} />
       </main>
     </>
