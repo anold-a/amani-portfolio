@@ -35,15 +35,15 @@ export default function Projects() {
           <Reveal key={p.name} delay={i * 80}>
             <article className="group relative flex h-full flex-col overflow-hidden rounded-lg border border-line bg-card transition hover:border-brand/60">
               {p.image && (
-                <div className="project-image relative aspect-video overflow-hidden border-b border-line bg-line">
+                <div className="project-image relative aspect-16/11 overflow-hidden border-b border-line bg-line">
   <Image
-    src={p.image}
-    alt={`${p.name} screenshot`}
-    fill
-    sizes="(min-width: 1200px) 540px, (min-width: 768px) 48vw, 100vw"
-    quality={90}
-    className="object-cover object-top"
-  />
+  src={p.image}
+  alt={`${p.name} screenshot`}
+  fill
+  quality={95}
+  sizes="(min-width: 1200px) 540px, (min-width: 768px) 48vw, 100vw"
+  className="object-cover object-top"
+/>
 
   <div className="project-image-overlay absolute inset-0 z-20 flex items-center justify-center bg-black/60">
 
@@ -108,4 +108,3 @@ export default function Projects() {
     </SharedUI>
   );
 }
-
