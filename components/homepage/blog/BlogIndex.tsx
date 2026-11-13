@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useState } from "react";
-import { ArrowRight, Clock } from "lucide-react";
+import { ArrowRight, Clock,Calendar } from "lucide-react";
 import PostCover from "./PostCover";
 import type { PostMeta } from "@/lib/posts";
 
@@ -13,8 +13,7 @@ export default function BlogIndex({ items }: { items: PostMeta[] }) {
   const [featured, ...rest] = shown;
 
  
-  const noOf = (slug: string) =>
-    String(items.length - items.findIndex((x) => x.slug === slug)).padStart(2, "0");
+  
 
   return (
     <>
@@ -40,43 +39,66 @@ export default function BlogIndex({ items }: { items: PostMeta[] }) {
       {featured && (
         <Link
           href={`/blogs/${featured.slug}`}
-          className=" group mt-10 grid overflow-hidden rounded-lg border border-line bg-card md:grid-cols-[1.1fr_1fr]"
+          className="group mt-10 grid gap-8 rounded-lg border border-line bg-card p-6 md:grid-cols-[1.1fr_1fr] md:p-8"
         >
-          <PostCover title={featured.title} src={featured.cover} tag={featured.tags[0]} className="min-h-56" />
-          <div className="flex flex-col justify-center p-7">
-            <span className="font-normal text-2xl">note no. {noOf(featured.slug)}</span>
+          
+          <div className="flex flex-col ">
+            <span className="text-xs font-medium uppercase tracking-wide text-muted">
+              {featured.tags[0]}
+            </span>
             <h2 className="mt-1  text-2xl font-bold leading-tight sm:text-3xl">{featured.title}</h2>
             <p className="mt-3 text-muted">{featured.summary}</p>
-            <p className="mt-5 flex items-center gap-4 text-sm text-muted">
+
+            <div className="mt-auto flex items-center justify-between pt-8 text-sm">
+               <p className="flex items-center gap-4 text-sm text-muted">
               <span>{featured.dateLabel}</span>
               <span className="flex items-center gap-1.5"><Clock size={14} /> {featured.minutes} min read</span>
             </p>
-            <span className="mt-6 inline-flex items-center gap-2 font-semibold text-brand">
-              Read the blog <ArrowRight size={16} className="transition group-hover:translate-x-1" />
-            </span>
+            <span className="inline-flex items-center gap-2 font-medium text-ink">
+                Read the article{" "}
+                <ArrowRight size={16} className="transition group-hover:translate-x-1" />
+              </span>
+            </div>     
           </div>
+
+          <PostCover title={featured.title} src={featured.cover} tag={featured.tags[0]} className="min-h-56 rounded-sm" />
         </Link>
       )}
 
       {rest.length > 0 && (
-        <ol className="mt-12 divide-y divide-line border-y border-line">
+        <ul className="mt-6 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {rest.map((p) => (
-            <li key={p.slug}>
+            <li key={p.slug} className="flex">
               <Link
                 href={`/blogs/${p.slug}`}
-                className="group grid items-center gap-3 py-6 transition hover:bg-card md:grid-cols-[3.5rem_1fr_auto] md:px-3"
+                 className="group flex h-full w-full flex-col rounded-lg border border-line bg-card p-6 transition hover:border-brand"
               >
-                <span className="font-normal text-3xl leading-none ">{noOf(p.slug)}</span>
-                <div>
-                  <h3 className="font-display text-xl font-semibold transition group-hover:text-brand">{p.title}</h3>
-                  <p className="mt-1 text-muted">{p.summary}</p>
-                  <p className="mt-2 text-xs text-muted">{p.dateLabel} · {p.minutes} min read</p>
+                 <p className="flex items-center gap-4 text-xs text-muted">
+                  <span className="flex items-center gap-1.5">
+                    <Calendar size={13} /> {p.dateLabel}
+                  </span>
+                  <span className="flex items-center gap-1.5">
+                    <Clock size={13} /> {p.minutes} min
+                  </span>
+                </p>
+
+
+                <h3 className="mt-5 text-lg font-semibold leading-snug text-brand">{p.title}</h3>
+                <p className="mt-3 text-sm text-muted">{p.summary}</p>
+                <div className="mt-auto flex flex-wrap gap-2 pt-6">
+                  {p.tags.map((t) => (
+                    <span
+                      key={t}
+                      className="rounded-sm border border-line px-3 py-1 text-[10px] font-semibold uppercase tracking-wide text-muted"
+                    >
+                      {t}
+                    </span>
+                  ))}
                 </div>
-                <ArrowRight className="hidden text-muted transition group-hover:translate-x-2 group-hover:text-brand md:block" />
               </Link>
             </li>
           ))}
-        </ol>
+        </ul>
       )}
     </>
   );

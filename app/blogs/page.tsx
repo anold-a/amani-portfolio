@@ -13,7 +13,7 @@ export default function BlogsPage() {
   return (
     <>
       <BlogHeader />
-      <main className="mx-auto max-w-5xl px-6 pb-20 pt-28">  
+      <main className="mx-auto max-w-7xl px-6 pb-20 pt-28">  
         <h1 className="text-lg font-bold text-brand tracking-[0.09em] sm:text-xl">
            <span className="text-[#b8c2d9]"> ALL</span> BLOGS
           </h1>
