@@ -3,7 +3,7 @@ import Image from "next/image";
 export default function PostCover({
   title,
   tag,
-  src,
+  src ="/blog.jpeg",
   className = "",
 }: {
   title: string;
@@ -12,32 +12,21 @@ export default function PostCover({
   className?: string;
 }) {
   return (
-    <div className={`relative isolate overflow-hidden bg-brand text-bg ${className}`}>
+    <div className={`flex  p-4 ${className}`}>
+    <div className="relative isolate flex-1 overflow-hidden  text-bg border border-[#111] bg-[#fafafa]" >
       {src ? (
         <Image src={src} alt="" fill sizes="(min-width: 1024px) 50vw, 100vw" className="object-cover" />
       ) : (
-        <>
-          <div
+      
+         <span
             aria-hidden
-            className="absolute inset-0 opacity-20"
-            style={{
-              backgroundImage: "radial-gradient(var(--bg) 1.5px, transparent 1.5px)",
-              backgroundSize: "18px 18px",
-            }}
-          />
-          <span
-            aria-hidden
-            className="mt-1 max-w-2xl text-2xl font-normal sm:text-4xl"
+            className="absolute inset-0 flex items-center justify-center text-7xl font-medium text-[#111]/15"
           >
             {title[0]}
           </span>
-          {tag && (
-            <span className="absolute left-5 top-5 rounded-full bg-bg px-3 py-1 text-[10px] font-bold uppercase tracking-wider text-brand">
-              {tag}
-            </span>
-          )}
-        </>
+      
       )}
+    </div>
     </div>
   );
 }

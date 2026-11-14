@@ -36,32 +36,47 @@ export default function BlogIndex({ items }: { items: PostMeta[] }) {
         ))}
       </div>
 
-      {featured && (
+     {featured && (
         <Link
           href={`/blogs/${featured.slug}`}
-          className="group mt-10 grid gap-8 rounded-lg border border-line bg-card p-6 md:grid-cols-[1.1fr_1fr] md:p-8"
+         
+          className="group mt-10 grid gap-8 rounded-sm border border-[#e6e6e6] bg-white p-8 md:grid-cols-[1.2fr_1fr]"
         >
-          
-          <div className="flex flex-col ">
-            <span className="text-xs font-medium uppercase tracking-wide text-muted">
+          <div className="flex flex-col">
+           
+            <span className="text-xs font-medium uppercase tracking-wide text-[#6b6b6b]">
               {featured.tags[0]}
             </span>
-            <h2 className="mt-1  text-2xl font-bold leading-tight sm:text-3xl">{featured.title}</h2>
-            <p className="mt-3 text-muted">{featured.summary}</p>
+            
+            <h2 className="mt-4 max-w-xl text-3xl font-medium leading-[1.1] tracking-tight text-[#111] sm:text-[34px]">
+              {featured.title}
+            </h2>
+            
+            <p className="mt-5 max-w-lg text-base leading-relaxed text-[#6b6b6b]">{featured.summary}</p>
 
-            <div className="mt-auto flex items-center justify-between pt-8 text-sm">
-               <p className="flex items-center gap-4 text-sm text-muted">
-              <span>{featured.dateLabel}</span>
-              <span className="flex items-center gap-1.5"><Clock size={14} /> {featured.minutes} min read</span>
-            </p>
-            <span className="inline-flex items-center gap-2 font-medium text-ink">
+            <div className="mt-auto flex items-center justify-between gap-4 pt-10">
+              
+              <p className="flex items-center gap-2 text-xs text-[#9a9a9a]">
+               
+                <span className="flex h-5 w-5 items-center justify-center rounded-full bg-[#111] text-[9px] font-semibold text-white">
+                  A
+                </span>
+                <span className="text-[#444]">Arnold Amani</span>
+                <span>·</span>
+                <span>{featured.dateLabel}</span>
+                <span>·</span>
+                <span>{featured.minutes} min read</span>
+              </p>
+             
+              <span className="inline-flex items-center gap-2 text-sm text-[#111]">
                 Read the article{" "}
-                <ArrowRight size={16} className="transition group-hover:translate-x-1" />
+                <ArrowRight size={15} className="transition group-hover:translate-x-1" />
               </span>
-            </div>     
+            </div>
           </div>
 
-          <PostCover title={featured.title} src={featured.cover} tag={featured.tags[0]} className="min-h-56 rounded-sm" />
+          
+          <PostCover title={featured.title} src={featured.cover} className="min-h-72" />
         </Link>
       )}
 
