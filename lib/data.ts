@@ -17,36 +17,7 @@ export const profile = {
   photo: "/me.jpg",
 };
 
-type Cert = {
-title: string;
-desc: string;
-tags:string[];
-image?: string;
-};
 
-
-export const certs: Cert[] = [
-  {
-  title: "Scrimba",
-  image: "/dsa.png",
-  desc: "Strengthened my understanding of data structures and algorithms through interactive Scrimba coursework and hands-on coding challenges.",
-  tags: ["Data Structures", "Algorithms"]
-},
-{
-  title: "CITI",
-  image: "/citi.png",
-  desc: "Built an internal Java tool to visualize stock market risk in real time, working with databases, APIs and software design concepts.",
-  tags: ["UML", "Databases & APIs", "Java"]
-},
-{
-  title: "freeCodeCamp",
-  image: "/fc.png",
-  desc: "Developed my JavaScript skills through interactive lessons and coding projects covering core programming concepts and problem-solving.",
-  tags: ["JavaScript", "Programming", "Coding Challenges"]
-}
- 
-  
-];
 
 export const experience = [
   {
@@ -122,8 +93,8 @@ github?: string;
 };
 
 export const projects: Project[] = [
-  { name: "Job Pulse",image: "/bango-bied.webp", desc: "Job application tracker with a user-friendly UI, filters and charts.", stack: ["Next.js", "Tailwind"],href: "https://github.com/anold-a/job-pulse.git",github:"https://github.com/anold-a/job-pulse.git"},
-  { name: "SmartSeason",image: "/farm.png", desc: "Role-based crop field monitoring system.", stack: ["Next.js", "Prisma", "TypeScript"], href: "https://github.com/anold-a/farm-flow.git",github:"https://github.com/anold-a/farm-flow.git"},
+  { name: "Job Pulse",image: "/job-pulse.jpeg", desc: "Job application tracker with a user-friendly UI, filters and charts.", stack: ["Next.js", "Tailwind"],href: "https://job-pulse-psi-seven.vercel.app/",github:"https://github.com/anold-a/job-pulse.git"},
+  { name: "SmartSeason",image: "/smart-season.jpeg", desc: "Role-based crop field monitoring system.", stack: ["Next.js", "Prisma", "TypeScript"], href: "https://farm-flow-mu.vercel.app/",github:"https://github.com/anold-a/farm-flow.git"},
   
 ];
 
