@@ -95,6 +95,10 @@ github?: string;
 export const projects: Project[] = [
   { name: "Job Pulse",image: "/job-pulse.jpeg", desc: "Job application tracker with a user-friendly UI, filters and charts.", stack: ["Next.js", "Tailwind"],href: "https://job-pulse-psi-seven.vercel.app/",github:"https://github.com/anold-a/job-pulse.git"},
   { name: "SmartSeason",image: "/smart-season.jpeg", desc: "Role-based crop field monitoring system.", stack: ["Next.js", "Prisma", "TypeScript"], href: "https://farm-flow-mu.vercel.app/",github:"https://github.com/anold-a/farm-flow.git"},
+  { name: "Agri-online-marketplace",image: "/market-place.jpeg", desc: "An online market place where farmers can search,market, negotiate and trade  agriculture equipments", stack: ["Next.js", "Prisma","PostgreSQL", "TypeScript"], href: "https://farm-flow-mu.vercel.app/",github:"https://github.com/anold-a/tractor-online-store"},
+  { name: "School-management-system",image: "/ikonex.jpeg", desc: "A school system built for managing students, class streams, subjects, scores and generating PDF report cards.", stack: ["HTML","CSS", "JavaScript", "Node.js + Express.js","MySQL"], href: "https://github.com/anold-a/ikonex-school-management-application-",github:"https://github.com/anold-a/ikonex-school-management-application-"},
+  
+
   
 ];
 
