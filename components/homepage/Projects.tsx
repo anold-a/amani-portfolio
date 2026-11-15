@@ -10,7 +10,6 @@ import Link from "next/link";
 import {
   ArrowRight,
   ArrowUpRight,
-  Star,
   Code2,
   ExternalLink,
 } from "lucide-react";
@@ -35,7 +34,7 @@ export default function Projects() {
           <Reveal key={p.name} delay={i * 80}>
             <article className="group relative flex h-full flex-col overflow-hidden rounded-lg border border-line bg-card transition hover:border-brand/60">
               {p.image && (
-                <div className="project-image relative aspect-[1298/640] overflow-hidden border-b border-line bg-line">
+                <div className="project-image relative aspect-1298/640 overflow-hidden border-b border-line bg-line">
   
   <Image
     src={p.image}

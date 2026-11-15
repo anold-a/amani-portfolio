@@ -25,7 +25,7 @@ export default function SharedUI({
    
         
       </Reveal>
-      <div className="mt-16">{children}</div>
+      <div className="mt-5">{children}</div>
     </section>
   );
 }

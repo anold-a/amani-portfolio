@@ -113,3 +113,54 @@ export const stats = [
 ];
 
 
+export type Cert = {
+  title: string;
+  issuer: string;
+  date: string;
+   hours?: string;             
+  logo?: string;           
+  credentialId?: string;   
+  certificateUrl?: string; 
+  verifyUrl?: string;      
+};
+
+
+export const certs: Cert[] = [
+   {
+    title: "JavaScript Developer Certification",
+    issuer: "freeCodeCamp",
+    date: "Oct 2026",                 
+    hours: "Approx. 300 hours",       
+    logo: "/freeCodeCamp.jpeg",
+    certificateUrl:"https://www.freecodecamp.org/certification/fcce8ca3bd4-ebf4-4076-8132-a329d974b0e2/javascript-v9",
+    verifyUrl:"https://www.freecodecamp.org/certification/fcce8ca3bd4-ebf4-4076-8132-a329d974b0e2/javascript-v9"  
+  },
+   {
+    title: "Data Structures and Algorithms",   
+    issuer: "Scrimba",
+    date: "Oct 2026",                          
+    hours: "4.3 hours · 61 lessons",          
+    logo: "/scrimba.jpeg",
+    certificateUrl:"https://scrimba.com/u4159900:certs;cert2ffentAFMUNriXCWySHVArQw3SbH67FfzLuhre2W3z6JtX",
+    verifyUrl:"https://scrimba.com/u4159900:certs;cert2ffentAFMUNriXCWySHVArQw3SbH67FfzLuhre2W3z6JtX" 
+   
+  },
+   {
+    title: "Intro to NestJS",                   
+    issuer: "Scrimba",
+    date: "Sep 2026",                          
+    hours: "1.4 hours · 22 lessons",           
+    logo: "/scrimba.jpeg", 
+    certificateUrl:"https://scrimba.com/u4159900:certs;cert29m6quprvaPdBmTAxqJt3k6vSht7RAT6E1dChQnYYjBeD",
+    verifyUrl:"https://scrimba.com/u4159900:certs;cert29m6quprvaPdBmTAxqJt3k6vSht7RAT6E1dChQnYYjBeD"          
+  },
+  {
+    title: "Technology Software Development Job Simulation", 
+    issuer: "Citi · Forage",                                   
+    date: "Sep 2026",                                         
+    logo: "/citi.jpeg",
+    certificateUrl:"https://www.theforage.com/simulations/citi/software-development-dlxt/completed",
+    verifyUrl:"https://www.theforage.com/simulations/citi/software-development-dlxt/completed"
+  },
+];
+
