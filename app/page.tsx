@@ -10,6 +10,7 @@ import { Analytics } from "@vercel/analytics/next"
 import Footer from "@/components/homepage/Footer";
 import Cursor from "@/components/homepage/Cursor";
 import Blogs from "@/components/homepage/Blogs";
+import Certs from "@/components/homepage/Certs";
 
 
 
@@ -19,6 +20,7 @@ export default function Home() {
     <Navbar />
     <Hero />
     <Bio />
+    <Certs />
     <Experience />
     <Builds />
     <Projects />
