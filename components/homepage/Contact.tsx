@@ -78,23 +78,23 @@ const contactInfo = (
 
 
   return (
-    <SharedUI id="contact" index={<>Do not be a stranger</>} scramble  title={<>Say <span>hello</span></>}>
+    <SharedUI id="contact" index={<p className="text-2xl font-bold text-white">Contact</p>} scramble  title={<span className="text-sm text-slate-400">Get in touch</span>}>
       <div className="grid items-center gap-10 md:grid-cols-2">
         <div>
-          <h3 className="font-display text-4xl font-black leading-[1.05] tracking-tight sm:text-5xl">
+          <h3 className="font-display text-4xl text-white font-black leading-[1.05] tracking-tight sm:text-5xl">
             Got an idea?
             <br />
-            <span className="text-brand">Let&apos;s build it.</span>
+            <span className="text-slate-400">Let&apos;s build it.</span>
           </h3>
           <p className="mt-6 max-w-md  pl-4 text-lg text-muted">
             I am open to collaborations, freelance work and full-time roles. Send a message and I will reply as soon as I can.
           </p>
         </div>
 
-        <div className="rounded-lg border border-line  p-6 bg-card">
+        <div className="rounded-lg border border-slate-800/80  p-6 bg-[#0b1120]">
           <a
             href={`mailto:${profile.email}`}
-            className="flex items-center justify-center gap-3 rounded-lg bg-ink px-6 py-4 font-semibold text-bg transition hover:opacity-90"
+            className="flex items-center text-white bg-brand justify-center gap-3 rounded-lg  px-6 py-4 font-semibold transition hover:opacity-90"
           >
             Send me a message <Send size={18} />
           </a>
@@ -110,19 +110,19 @@ const contactInfo = (
       href={profile.whatsapp} 
       target="_blank" 
       rel="noreferrer" 
-      className={`${pill} flex items-center rounded-xl justify-center gap-2 h-10`} 
+      className={`${pill} flex items-center rounded-xl border border-slate-800 bg-slate-900/80 text-white justify-center gap-2 h-10`} 
     >
       <MessageCircle size={16} /> WhatsApp
     </a>
   
 
  
-  <div className="flex justify-start  sm:justify-end shrink-0">
+  <div className="flex justify-start   sm:justify-end shrink-0">
     <a 
       href={profile.github} 
       target="_blank" 
       rel="noreferrer" 
-      className={`${pill} flex items-center rounded-xl justify-center gap-2 h-10`}
+      className={`${pill} flex items-center rounded-xl border border-slate-800 bg-slate-900/80 text-white justify-center gap-2 h-10`}
     >
       <GithubIcon size={16} /> GitHub
     </a>

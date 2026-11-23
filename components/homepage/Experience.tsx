@@ -54,8 +54,8 @@ export default function Experience() {
               </span>
               <Reveal>
                 <span className="inline-block rounded-md border border-brand bg-brand text-white  px-3 py-1 text-sm font-semibold">{e.period}</span>
-                <h3 className="mt-2 font-display text-xl font-semibold">{e.role}</h3>
-                <ul className="mt-2 space-y-1 text-muted">
+                <h3 className="mt-2 font-display text-xl font-semibold text-white">{e.role}</h3>
+                <ul className="mt-2 space-y-1 text-slate-400">
                   {e.points.map((p) => <li key={p}>{p}</li>)}
                 </ul>
               </Reveal>

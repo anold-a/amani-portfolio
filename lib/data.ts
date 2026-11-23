@@ -1,18 +1,31 @@
+import { MapPin, Cpu, Shuffle, Terminal } from "lucide-react";
+
 export const profile = {
   name: "Arnold Amani",
   first: "Arnold",
   last: "Amani",
-  role: "Dev",
+  role: "Web Developer",
   location: "Nyeri, Kenya",
   tagline: "Into Advanced System Design.",
   bio: [
     "First Of My Name.",
     "The rest I am still writing.",
-    "Beyond coding, I enjoy experimenting on new technologies and deep diving in poetry world.",
+    "Beyond coding, I enjoy experimenting on new technologies and always learning something new.",
   ],
+  subBio: [
+  "A BBIT graduate,with a year of building websites and web applications.",
+  "Current transitioning from being a frontend developer to a full stack developer,mobile later",
+  "So far working across the entire application, from the database to the interface.",
+  "Comfortable building with React, Next.js, Node.js, and Express, with experience in both PostgreSQL and MongoDB.",
+  "I've built and shipped real projects end-to-end, including a job application tracker and a role-based field monitoring platform.",
+  "Focused on writing clean, maintainable code and following good practices rather than just getting something to run.",
+  
+  
+],
   email: "amaniarnold08@gmail.com",
   github: "https://github.com/iam-amani",
   whatsapp: "https://wa.me/@itzchaupole",
+  linkedin: "",
   resume: "/",
   photo: "/me.jpg",
 };
@@ -116,6 +129,9 @@ export const stats = [
 export type Cert = {
   title: string;
   issuer: string;
+    status?: string;              
+  description?: string;   
+  tags?: string[];
   date: string;
    hours?: string;             
   logo?: string;           
@@ -161,6 +177,27 @@ export const certs: Cert[] = [
     logo: "/citi.jpeg",
     certificateUrl:"https://www.theforage.com/simulations/citi/software-development-dlxt/completed",
     verifyUrl:"https://www.theforage.com/simulations/citi/software-development-dlxt/completed"
+  },
+];
+
+export const highlights = [
+  {
+    label: "Location",
+    title: "Nyeri",
+    subtitle: "Central, Kenya",
+    icon: MapPin,
+  },
+  {
+    label: "Focus",
+    title: "Full-Stack",
+    subtitle: "Resilient Systems",
+    icon: Cpu,
+  },
+  {
+    label: "Exploring",
+    title: "DSA & Graphs",
+    subtitle: "Advanced Primitives",
+    icon: Shuffle,
   },
 ];
 

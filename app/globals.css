@@ -3,7 +3,7 @@
 :root {
  
 --brand:#c6ff3d;
---bg: #f7f2ea;
+--bg:#0F172A;
 --card: #fffdf9;
 --ink: #1f1b16;
 --muted: #6b6258;
@@ -44,8 +44,7 @@
 html { scroll-behavior: smooth; }
 body { background: var(--bg);
    color: var(--ink);
-   background-image: radial-gradient(rgba(255, 255, 255, 0.06) 1px, transparent 1px);
-   background-size: 24px 24px;
+   
   }
 section[id] { scroll-margin-top: 2rem; }
 ::selection { background: var(--brand); color: var(--bg); } 

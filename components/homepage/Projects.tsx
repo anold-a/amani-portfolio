@@ -21,18 +21,18 @@ export default function Projects() {
   return (
     <SharedUI
       id="projects"
-      index={<>Projects In Action</>}
+      index={<p className="text-2xl font-bold text-white">Things I've built</p>}
       scramble
       title={
-        <>
-          Things I <span>built</span>
-        </>
+        <p className="text-sm text-slate-400">
+          Selected production applications
+        </p>
       }
     >
       <div className="grid gap-6 md:grid-cols-2">
         {projects.map((p, i) => (
           <Reveal key={p.name} delay={i * 80}>
-            <article className="group relative flex h-full flex-col overflow-hidden rounded-lg border border-line bg-card transition hover:border-brand/60">
+            <article className="group relative flex h-full flex-col overflow-hidden rounded-lg border border-line bg-[#0b1120] transition hover:border-brand/60">
               {p.image && (
                 <div className="project-image relative aspect-1298/640 overflow-hidden border-b border-line bg-line">
   
@@ -73,7 +73,7 @@ export default function Projects() {
 
               <div className="flex flex-1 flex-col p-6">
                 <div className="flex items-start justify-between gap-4">
-                  <h3 className="font-display text-xl font-semibold">
+                  <h3 className="font-display text-xl font-semibold text-white">
                     {p.name}
                   </h3>
 
@@ -87,7 +87,7 @@ export default function Projects() {
 
                 <p className="mt-2 text-muted">{p.desc}</p>
 
-                <div className="mt-4 flex flex-wrap gap-2">
+                <div className="mt-2 flex flex-wrap gap-2">
                   {p.stack.map((s) => (
                     <Tag key={s}>{s}</Tag>
                   ))}
