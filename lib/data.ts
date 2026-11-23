@@ -31,67 +31,72 @@ export const profile = {
 };
 
 
-
-export const experience = [
+export type Experience = {
+  id: string;
+  period: string;
+  role: string;
+  company?: string;
+  location?: string;
+  current?: boolean;
+  points: string[]; 
+  tags?: string[];
+};
+export const experience: Experience[] = [
   {
     id: "001",
     period: "2026 - Present",
-    role: "Independent Developer",
+    role: "Freelancing Gigs",
+    company: "Dev.io",
+    location: "Nyeri, Kenya (Remote)",
+    current: true,
     points: [
-      "Plan, build and deploy full-stack web apps on my own, from the first commit to a live site.",
-      "Work mainly with Next.js, Prisma and Tailwind CSS.",
+      "Plan, build and deploy **full-stack web apps** on my own, from the first commit to a live site.",
+      "Built **Job Pulse**, a job application tracker with a kanban board, follow-up automation and funnel analytics.",
+      "Built **SmartSeason**, a crop field monitoring system with **role-based access control**.",
     ],
+    tags: ["Next.js", "TypeScript", "Prisma", "PostgreSQL", "Tailwind CSS"],
   },
   {
     id: "002",
-    period: "Ongoing",
-    role: "Version control and clean history",
+    period: "2025",
+    role: "Full-Stack Developer",
+    company: "Tractor Online Store",
+    location: "Nairobi, Kenya",
     points: [
-      "Write descriptive commit messages with type prefixes such as feat, fix and style.",
-      "Work over SSH and keep every project public, so my history can be read from the first commit.",
+      "Built a **marketplace for second-hand agricultural equipment** from scratch.",
+      "Implemented **video previews**, secure payments and product management.",
+      "Designed the **Prisma and PostgreSQL schema** for products and users.",
     ],
+    tags: ["Next.js", "TypeScript", "Prisma", "PostgreSQL"],
   },
   {
     id: "003",
-    period: "2026",
-    role: "Data and access control",
+    period: "Sep 2024 - Feb 2025",
+    role: "Collaborative IT Team Member",
+    company: "McDorcis Solutions",
+    location: "Nairobi, Kenya",
     points: [
-      "Model data with Prisma and build role-based access for a crop field monitoring system.",
-      "Keep secrets such as database URLs in environment variables, out of the repository.",
+      "Helped build an **online storefront** with product listing, search and authentication.",
+      "Used **dynamic routing and server-side rendering** to improve performance and SEO.",
+      "Took part in **code reviews** with senior developers.",
     ],
+    tags: ["Next.js", "JavaScript", "SSR", "Code Review"],
   },
   {
     id: "004",
-    period: "2026",
-    role: "Interfaces that work for everyone",
-    points: [
-      "Build keyboard friendly components, such as an accordion with proper aria attributes.",
-      "Respect reduced motion settings and design layouts that work on phones first.",
-    ],
+    period: "Sep 2024",
+    role: "Software Development Certificate",
+    company: "Power Learn Project",
+    points: ["Completed hands-on training in **software development fundamentals**."],
+    tags: ["JavaScript", "Git"],
   },
   {
     id: "005",
-    period: "2024",
-    role: "Bachelor of Business Information Technology (BBIT)",
-    points: [
-      "Studied information systems,business and supply chain.",
-      
-    ],
-  },
-];
-
-export const builds = [
-   {
-    quote:
-      "I use projects as a way to turn ideas into practical software and explore technologies I want to understand better.",
-    name: "Build",
-    role: "Turning ideas into working projects.",
-  },
-  {
-    quote:
-      "My projects evolve as I learn  from experimenting with new stacks to improving existing applications and exploring new ideas.",
-    name: "Explore",
-    role: "Current work and future projects.",
+    period: "Graduate",
+    role: "BTech, Business Information Technology",
+    company: "JKUAT",
+    location: "Nairobi, Kenya",
+    points: ["Studied **information systems, business and supply chain**."],
   },
 ];
 

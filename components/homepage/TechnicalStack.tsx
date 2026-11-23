@@ -46,7 +46,7 @@ const stackCategories = [
 
 export default function TechnicalStack() {
   return (
-    <div className="rounded-2xl border border-slate-800/80 bg-[#0b1120] p-6 shadow-xl sm:p-7">
+    <div className="rounded-2xl border border-[#2b3447] bg-[#1E293B] p-6 shadow-xl sm:p-7">
       
       <div className="flex items-center justify-between">
         <div className="flex items-center gap-3">
@@ -81,7 +81,7 @@ export default function TechnicalStack() {
                   return (
                     <span
                       key={skill.name}
-                      className="inline-flex items-center gap-2 rounded-lg border border-slate-800 bg-slate-900/80 px-3 py-1.5 text-xs font-medium text-slate-300 transition hover:border-brand/40 hover:text-white"
+                      className="inline-flex items-center gap-2 rounded-lg border border-[#2b3447] bg-[#232b3d] px-3 py-1.5 text-xs font-medium text-slate-300 transition hover:border-brand/40 hover:text-white"
                     >
                       
                       {skill.name}
